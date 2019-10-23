@@ -75,7 +75,7 @@
                     </li>
                   
                     <li><a href="{{URL::to('bank')}}">BANK</a></li>
-                     <li><a href="contact.html">SIGN IN</a></li>
+                     <li><a href="{{URL::to('signin')}}">SIGN IN</a></li>
                   </ul>
 
                 </div> <!-- /#navbar -->

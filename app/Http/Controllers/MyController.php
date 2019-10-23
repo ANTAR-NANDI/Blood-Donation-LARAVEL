@@ -23,4 +23,8 @@ class MyController extends Controller
     {
     	return view('User.pages.tips');
     }
+     public function signin()
+    {
+        return view('User.pages.signin');
+    }
 }

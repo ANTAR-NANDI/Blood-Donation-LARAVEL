@@ -18,3 +18,4 @@ Route::get('index','MyController@home');
 Route::get('alldonorlist','MyController@alldonorlist');
 Route::get('bank','MyController@bank');
 Route::get('tips','MyController@tips');
+Route::get('signin','MyController@signin');
