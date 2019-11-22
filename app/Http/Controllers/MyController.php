@@ -6,25 +6,30 @@ use Illuminate\Http\Request;
 
 class MyController extends Controller
 {
-    public function home()
+    // public function home()
+    // {
+    // 	return view('User.pages.index');
+    // }
+    public function about()
     {
-    	return view('User.pages.index');
-    }
-    public function alldonorlist()
-    {
-    	return view('User.pages.alldonorlist');
+    	return view('User.pages.about');
     }
 
-    public function bank()
+    public function request()
     {
-    	return view('User.pages.bank');
+    	return view('User.pages.request');
     }
     public function tips()
     {
     	return view('User.pages.tips');
     }
-     public function signin()
+     public function contact()
     {
-        return view('User.pages.signin');
+        return view('User.pages.contact');
+    }
+
+    public function register()
+    {
+        return view('User.pages.register');
     }
 }
