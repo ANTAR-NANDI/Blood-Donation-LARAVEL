@@ -650,11 +650,11 @@
                                                 <table border="0" cellpadding="5" cellspacing="0" class="ULtable">
                                                     <tbody>
                                                         <tr>
-                                                            <td><img src="{{ asset('website/bbi_theme/images/arrow.jpg')}}" width="8" height="5" alt="Next arrow blood bank india" /></td>
+                                                            <td><img src="bbi_theme/images/arrow.jpg" width="8" height="5" alt="Next arrow blood bank india" /></td>
                                                             <td>Low fat foods</td>
                                                         </tr>
                                                         <tr>
-                                                            <td><img src="{{ asset('website/bbi_theme/images/arrow.jpg')}}" /></td>
+                                                            <td><img src="bbi_theme/images/arrow.jpg" width="8" height="5" alt=" nextarrow blood bank india" /></td>
                                                             <td>Iron rich foods</td>
                                                         </tr>
                                                     </tbody>

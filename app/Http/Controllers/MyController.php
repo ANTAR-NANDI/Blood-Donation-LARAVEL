@@ -6,10 +6,7 @@ use Illuminate\Http\Request;
 
 class MyController extends Controller
 {
-    // public function home()
-    // {
-    // 	return view('User.pages.index');
-    // }
+    
     public function about()
     {
     	return view('User.pages.about');
@@ -31,5 +28,9 @@ class MyController extends Controller
     public function register()
     {
         return view('User.pages.register');
+    }
+    public function privacy()
+    {
+        return view('User.pages.privacy');
     }
 }

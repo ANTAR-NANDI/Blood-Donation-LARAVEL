@@ -1,10 +1,8 @@
 @extends('User.layouts.defaults')
 @section('abc')
-@php
 
-@endphp
 
-    <script src="../../ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/jquery.validate.min.js" type="text/javascript"></script>
+   <script src="../../ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/jquery.validate.min.js" type="text/javascript"></script>
     <!--Optional: include only if you are using the extra rules in additional-methods.js -->
     <script src="../../ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/additional-methods.min.js" type="text/javascript"></script>
     <script>
@@ -31,7 +29,7 @@
                                         maxlength: 15
                                     },
                                     emailid: {
-                                        required: true, //email:true    }   },  messages:{  password:{  required:"Please enter your password",  minlength:"Password should atleast 8 letter",   maxlength:"Password should not exceed 20 letter"    },  emailid:{   required:"Please enter your email/mobile number"    }   }   }); }); $( ".control-group .input-group select" ).addClass( "form-control" );
+                                        required: true, //email:true	}	},	messages:{	password:{	required:"Please enter your password",	minlength:"Password should atleast 8 letter",	maxlength:"Password should not exceed 20 letter"	},	emailid:{	required:"Please enter your email/mobile number"	}	}	}); }); $( ".control-group .input-group select" ).addClass( "form-control" );
     </script>
     <script>
         $.validator.addMethod('numericOnly', function(value) {
@@ -75,42 +73,22 @@
         });
         $(".control-group .input-group select").addClass("form-control");
     </script>
+    <!--plugin for datepicker-->
     <script src="../../code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <link rel="stylesheet" href="../../code.jquery.com/ui/1.11.4/themes/excite-bike/jquery-ui.css">
     <script>
         $(function() {
-            $("#dob").datepicker({
+            $("#when_require").datepicker({
                 dateFormat: "dd-mm-yy",
-                maxDate: 0,
-                changeMonth: true,
-                changeYear: true,
-                yearRange: "-70:+0"
-            });
-        });
-    </script>
-    <script>
-        $(function() {
-            $("#blooddonateddate").datepicker({
-                dateFormat: "dd-mm-yy",
-                maxDate: 0,
+                minDate: 0,
                 changeMonth: true,
                 changeYear: true
             });
         });
     </script>
-    <script type="text/javascript">
-        function viewEligibility() {
-            window.open("../information/eligibility.html", 'BloodDonorEligibility', 'width=500,height=600,toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes');
-        }
-
-        function viewTerms() {
-            window.open("privacy_policy.html", 'DonorTerms', 'width=500,height=600,toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes');
-        }
-    </script>
-    <div class="register-main-contant">
+    <div class="request-main-content">
         <div class="container bbi-wrap">
             <div class="row">
-                <div class="login-mobile"> </div>
                 <div class="right-side">
                     <div class="ads">
                         <script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
@@ -120,7 +98,7 @@
                         </script>
                     </div>
                     <!-- ads -->
-                    <div class="tab-widget">
+                    <div class="tab-widget" >
                         <ul class="nav nav-tabs">
                             <li class="active"><a href="#BLOOD-REQUESTS">BLOOD <span>REQUESTS</span></a></li>
                             <li><a href="#RECENT-DONORS">RECENT <span>DONORS</span></a></li>
@@ -140,7 +118,7 @@
                                                 <div class='b-group'>A- </div>
                                                 <br>
                                                 <div class='sub-b-group-4'>
-                                                    <a data-toggle='tooltip' data-placement='top' title='View Details' href=../tools/req/2059.html> <i class='fa fa-search' aria-hidden='true'></i> </a>
+                                                    <a data-toggle='tooltip' data-placement='top' title='View Details' href=req/2059.html> <i class='fa fa-search' aria-hidden='true'></i> </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -154,7 +132,7 @@
                                                 <div class='b-group'>A- </div>
                                                 <br>
                                                 <div class='sub-b-group-4'>
-                                                    <a data-toggle='tooltip' data-placement='top' title='View Details' href=../tools/req/2058.html> <i class='fa fa-search' aria-hidden='true'></i> </a>
+                                                    <a data-toggle='tooltip' data-placement='top' title='View Details' href=req/2058.html> <i class='fa fa-search' aria-hidden='true'></i> </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -168,7 +146,7 @@
                                                 <div class='b-group'>AB+ </div>
                                                 <br>
                                                 <div class='sub-b-group-4'>
-                                                    <a data-toggle='tooltip' data-placement='top' title='View Details' href=../tools/req/2057.html> <i class='fa fa-search' aria-hidden='true'></i> </a>
+                                                    <a data-toggle='tooltip' data-placement='top' title='View Details' href=req/2057.html> <i class='fa fa-search' aria-hidden='true'></i> </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -182,7 +160,7 @@
                                                 <div class='b-group'>A+ </div>
                                                 <br>
                                                 <div class='sub-b-group-4'>
-                                                    <a data-toggle='tooltip' data-placement='top' title='View Details' href=../tools/req/2056.html> <i class='fa fa-search' aria-hidden='true'></i> </a>
+                                                    <a data-toggle='tooltip' data-placement='top' title='View Details' href=req/2056.html> <i class='fa fa-search' aria-hidden='true'></i> </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -192,7 +170,7 @@
                                 <!-- /.widget-main -->
                             </div>
                             <div id="RECENT-DONORS" class="tab-pane fade">
-                                <div class="widget-main">
+                                <div class="widget-main" >
                                     <div class="widget-inner">
                                         <div class='blood-req-widget'>
                                             <div class='rec-b-group'>B+ </div>
@@ -246,56 +224,24 @@
                     </div>
                     <!-- tab-widget -->
                 </div>
-                <!-- Right side -->
                 <div class="left-side">
                     <div class="row">
                         <div class="widget-item"> <span class="errspns"> </span>
-                            <h2 class="welcome-text">Register as a Blood Donor</h2>
-                            <form class="form-horizontal" method="post" action="https://www.bloodbankindia.net/donors/register_action" id="register">
+                            <h2 class="welcome-text">Request Blood</h2>
+                            <form class="form-horizontal" action="https://www.bloodbankindia.net/Tools/request_blood_action" id="request_blood" method="post" id="request_blood">
                                 <div class="mob-con-border">
                                     <div class="con-border">
                                         <div class="col-md-12">
-                                            <h3>Login Information</h3>
+                                            <h3> Patient Details</h3>
                                             <div class="row">
                                                 <div class="col-md-6 mob-con-border">
                                                     <div class="control-group">
-                                                        <label>Full Name *</label>
+                                                        <label>Patient Name *</label>
                                                         <div class="input-group">
-                                                            <input type="text" class="form-control" aria-describedby="basic-addon1" rel="tooltip" name="donor_name" id="donor_name" value="" title="Please fill your Fullname Maximum 20 characters. "> </div>
+                                                            <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1" rel="tooltip" name="patient_name" id="patient_name" value="" title="Please enter Patient Name	Maximum 20 characters."> </div>
                                                     </div>
                                                     <div class="control-group">
-                                                        <label>Email ID *</label>
-                                                        <div class="input-group">
-                                                            <input type="email" class="form-control" rel="tooltip" name="emailid" id="emailid" value="" title="Email can contain only letters, numbers, periods (.), @, hyphens (-) and underscores (_)."> </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6 mob-con-border">
-                                                    <div class="control-group">
-                                                        <label>Password *</label>
-                                                        <div class="input-group">
-                                                            <input type="password" class="form-control" rel="tooltip" id="password" name="password" value="" title=" Please enter your password. Minimum 8 characters,case sensitive."> </div>
-                                                    </div>
-                                                    <div class="control-group">
-                                                        <label>Confirm Password *</label>
-                                                        <div class="input-group">
-                                                            <input type="password" class="form-control" rel="tooltip" id="cpassword" name="cpassword" value="" title="Please Re-enter your password exactly as entered in previous field."> </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="con-border">
-                                        <div class="col-md-12">
-                                            <h3> Donor Information</h3>
-                                            <div class="row">
-                                                <div class="col-md-6 mob-con-border">
-                                                    <div class="control-group">
-                                                        <label>Date of Birth *</label>
-                                                        <div class="input-group"> <span class="input-group-addon" id=""><i class="fa fa-calendar"></i></span>
-                                                            <input type="text" class="form-control" placeholder="Select" rel="tooltip" name="dob" id="dob" value="" readonly="readonly" title="Please select your Date of Birth"> </div>
-                                                    </div>
-                                                    <div class="control-group">
-                                                        <label>Your Blood Group *</label>
+                                                        <label>Blood Group *</label>
                                                         <div class="input-group">
                                                             <select name="blood" id="blood">
                                                                 <option value="0">Select </option>
@@ -309,59 +255,6 @@
                                                                 <option value="AB-">AB-</option>
                                                             </select>
                                                             <label for="blood" class="error"></label>
-                                                        </div>
-                                                    </div>
-                                                    <!-- <div class="control-group"> <label>How often you donate blood?</label> <div class="input-group"> <select name="how_often" class='form-control lastdonated'> <option value="0">Select</option> <option value="yet-to-donate">Yet to donate</option> <option value="Regular donor">Regular donor</option> <option value="On need basis">On need basis</option> </select> </div> </div> -->
-                                                    <div class="control-group">
-                                                        <label>How often you donate blood? *</label>
-                                                        <div class="input-group">
-                                                            <select name="how_often" id="type">
-                                                                <option name="" value="0">Select</option>
-                                                                <option name="yet" value="Yet to Donate">Yet to Donate</option>
-                                                                <option name="regular" value="Regular donor">Regular donor</option>
-                                                                <option name="on-need" value="On need basis">On need basis</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- col-md-6 -->
-                                                <div class="col-md-6 mob-con-border">
-                                                    <div class="control-group">
-                                                        <label>Gender *</label>
-                                                        <div class="input-group"> <span class="radio-inline"> <input type="radio" name="gender" id="optionsRadios1" value="M"> <label for="optionsRadios1" class="radio-gender">Male</label> </span> <span class="radio-inline"> <input type="radio" name="gender" id="optionsRadios2" value="F"> <label for="optionsRadios2" class="radio-gender">Female</label> </span> </div>
-                                                    </div>
-                                                    <div class="control-group">
-                                                        <label>Weight (Kg) *</label>
-                                                        <div class="input-group">
-                                                            <input type="text" class="form-control" placeholder="" name="weight" id="weight" value="" rel="tooltip" title="Please enter your weight"> </div>
-                                                    </div>
-                                                    <!-- <div class="control-group blooddonateddate" style="display: none;"> <label>Date of last blood donation</label> <div class="input-group"> <span class="input-group-addon" id=""><i class="fa fa-calendar"></i></span> <input type="text" class="form-control" rel="tooltip" name="blooddonateddate" placeholder="Select" id="blooddonateddate" value="" readonly="readonly" title="Please select Last blood donation Date"> </div> </div> -->
-                                                    <div id="row_dim">
-                                                        <div class="control-group blooddonateddate">
-                                                            <label>Date of last blood donation</label>
-                                                            <div class="input-group"> <span class="input-group-addon" id=""><i class="fa fa-calendar"></i></span>
-                                                                <input type="text" class="form-control" rel="tooltip" name="blooddonateddate" placeholder="Select" id="blooddonateddate" value="" readonly="readonly" title="Please select Last blood donation Date"> </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="con-border">
-                                        <div class="col-md-12">
-                                            <div class="mobile-head">
-                                                <h3>Contact Information</h3> </div>
-                                            <div class="row">
-                                                <div class="col-md-6 mob-con-border">
-                                                    <div class="control-group">
-                                                        <label>Residence Phone</label>
-                                                        <div class="input-group">
-                                                            <input type="text" class="form-control" rel="tooltip" name="res_phno" id="res_phno" value="" title="Please enter your Residence Phone Number"> </div>
-                                                    </div>
-                                                    <div class="control-group">
-                                                        <label>Address *</label>
-                                                        <div class="input-group">
-                                                            <textarea type="textarea" class="form-control" rel="tooltip" name="address1" id="address1" value="" title="Type your street address here.   Eg: #23, ABC Street"></textarea>
                                                         </div>
                                                     </div>
                                                     <div class="control-group">
@@ -874,183 +767,192 @@
                                                 </div>
                                                 <div class="col-md-6 mob-con-border">
                                                     <div class="control-group">
-                                                        <label>Mobile No *</label>
+                                                        <label>Hospital Name & Address *</label>
                                                         <div class="input-group">
-                                                            <input type="text" class="form-control" name="mob_no" id="mob_no" rel="tooltip" value="" title="Please enter your Mobile Number"> </div>
+                                                            <textarea type="textarea" class="form-control" rel="tooltip" name="hospital_detail" id="hospital_detail" placeholder="" value="" title="Type your street address here.	Eg: #23, ABC Street"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="control-group">
+                                                        <label>Doctor Name *</label>
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1" name="doctor_name" rel="tooltip" id="doctor_name" value="" title="Plese enter Doctor name"> </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="con-border">
+                                        <div class="col-md-12">
+                                            <h3> Contact Details</h3>
+                                            <div class="row">
+                                                <div class="col-md-6 mob-con-border">
+                                                    <div class="control-group">
+                                                        <label>Contact Name *</label>
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1" rel="tooltip" name="contact_name" id="contact_name" value="" title="Enter Contact Name"> </div>
+                                                    </div>
+                                                    <div class="control-group">
+                                                        <label>Contact Email ID *</label>
+                                                        <div class="input-group">
+                                                            <input type="email" class="form-control" placeholder="" rel="tooltip" name="contact_emailid" id="contact_emailid" value="" title="Enter Contact Email_Id"> </div>
+                                                    </div>
+                                                    <div class="control-group">
+                                                        <label>Contact Number *</label>
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" name="contact_number" id="contact_number" rel="tooltip" placeholder="" value="" title="Enter Contact Number"> </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 mob-con-border">
+                                                    <div class="control-group">
+                                                        <label>Other Message</label>
+                                                        <div class="input-group">
+                                                            <textarea type="textarea" class="form-control" name="other_mess" id="other_mess" placeholder=""></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="control-group">
+                                                        <label>When Required *</label>
+                                                        <div class="input-group"> <span class="input-group-addon" id=""><i class="fa fa-calendar"></i></span>
+                                                            <input type="text" class="form-control" rel="tooltip" name="when_require" placeholder="Select" id="when_require" value="" readonly="readonly" title="Select when you need blood"> </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <!-- mobile close-->
                                 <div class="clearfix"></div>
-                                <div class="control-group mob-con-border">
+                                <div class="mob-con-border control-group">
                                     <div class="controls">
                                         <div class="g-recaptcha" data-sitekey="6LfTwx0TAAAAAFkCeWGu9nesAY8BeBr9bgfRLtGA"></div>
                                     </div>
                                 </div>
-                                <div class="control-group mob-con-border">
+                                <br/>
+                                <div class="mob-con-border control-group">
                                     <div class="controls">
                                         <label class="checkbox">
-                                            <input type="checkbox" value="" name="accept_terms"> <span class="some">I have read the <a href="#" data-toggle="modal" data-target="#myModal-eligibility" >Eligibility Criteria</a> and confirm that I am eligible to donate blood. </span></label>
-                                        <div class="modal fade" id="myModal-eligibility" role="dialog">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-body">
-                                                        <div class="widget-item-model">
-                                                            <table width="100%" border="0" cellspacing="0" cellpadding="10">
-                                                                <tr>
-                                                                    <td align="left">
-                                                                        <div class="content">
-                                                                            <h2>DOs and DON'Ts of blood donation</h2>
-                                                                            <p>In order to ensure safe and health environment to both donors as well as recipients, we greatly recommend to follow the below rules:</p>
-                                                                            <h2>DO donate blood, only if you satisfy all of the following conditions</h2>
-                                                                            <table border="0" cellspacing="0" cellpadding="5">
-                                                                                <tr>
-                                                                                    <td valign="top"><img src="../bbi_theme/images/do.png" alt="-" width="10" height="10" /></td>
-                                                                                    <td valign="top">You are between age group of 18-60 years.</td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td valign="top"><img src="../bbi_theme/images/do.png" alt="-" width="10" height="10" /></td>
-                                                                                    <td valign="top">Your weight is 45 kgs or more.</td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td valign="top"><img src="../bbi_theme/images/do.png" alt="-" width="10" height="10" /></td>
-                                                                                    <td valign="top">Your hemoglobin is 12.5 gm% minimum.</td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td valign="top"><img src="../bbi_theme/images/do.png" alt="-" width="10" height="10" /></td>
-                                                                                    <td valign="top">Your last blood donation was 3 or more months earlier.</td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td valign="top"><img src="../bbi_theme/images/do.png" alt="-" width="10" height="10" /></td>
-                                                                                    <td valign="top">You are healthy and have not suffered from malaria, typhoid or other transmissible disease in the recent past.</td>
-                                                                                </tr>
-                                                                            </table>
-                                                                            <h2>DO NOT donate blood, if you have any of the following conditions</h2>
-                                                                            <table border="0" cellspacing="0" cellpadding="5">
-                                                                                <tr>
-                                                                                    <td valign="top"><img src="../bbi_theme/images/dont.png" alt="-" width="10" height="10" /></td>
-                                                                                    <td valign="top">Cold / fever in the past 1 week.</td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td valign="top"><img src="../bbi_theme/images/dont.png" alt="-" width="10" height="10" /></td>
-                                                                                    <td valign="top">Under treatment with antibiotics or any other medication.</td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td valign="top"><img src="../bbi_theme/images/dont.png" alt="-" width="10" height="10" /></td>
-                                                                                    <td valign="top">Cardiac problems, hypertension, epilepsy, diabetes (on insulin therapy), history of cancer, chronic kidney or liver disease, bleeding tendencies, venereal disease etc.</td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td valign="top"><img src="../bbi_theme/images/dont.png" alt="-" width="10" height="10" /></td>
-                                                                                    <td valign="top">Major surgery in the last 6 months.</td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td valign="top"><img src="../bbi_theme/images/dont.png" alt="-" width="10" height="10" /></td>
-                                                                                    <td valign="top">Vaccination in the last 24 hours.</td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td valign="top"><img src="../bbi_theme/images/dont.png" alt="-" width="10" height="10" /></td>
-                                                                                    <td valign="top">Had a miscarriage in the last 6 months or have been pregnant / lactating in the last one year.</td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td valign="top"><img src="../bbi_theme/images/dont.png" alt="-" width="10" height="10" /></td>
-                                                                                    <td valign="top">Had fainting attacks during last donation.</td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td valign="top"><img src="../bbi_theme/images/dont.png" alt="-" width="10" height="10" /></td>
-                                                                                    <td valign="top">Have regularly received treatment with blood products.</td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td valign="top"><img src="../bbi_theme/images/dont.png" alt="-" width="10" height="10" /></td>
-                                                                                    <td valign="top">Shared a needle to inject drugs/ have history of drug addiction. </td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td valign="top"><img src="../bbi_theme/images/dont.png" alt="-" width="10" height="10" /></td>
-                                                                                    <td valign="top">Had sexual relations with different partners or with a high risk individual.</td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td valign="top"><img src="../bbi_theme/images/dont.png" alt="-" width="10" height="10" /></td>
-                                                                                    <td valign="top">Been tested positive for antibodies to HIV.</td>
-                                                                                </tr>
-                                                                            </table>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                            </table>
-                                                        </div>
-                                                    </div>
-                                                    <!-- modal-body -->
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <br>
-                                        <label class="checkbox">
-                                            <input type="checkbox" value="condition" name="accept_condition"> I agree to the <span class="some"> <a href="#" data-toggle="modal" data-target="#myModal-terms">Terms and Conditions</span></a> and consent to have my contact and donor information published to the potential blood recipients. </label>
-                                        <div class="modal fade" id="myModal-terms" role="dialog">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-body">
-                                                        <div class="widget-item-model">
-                                                            <div class="content">
-                                                                <table width="100%" border="0" cellspacing="0" cellpadding="10">
-                                                                    <tr>
-                                                                        <td align="left">
-                                                                            <h2>Privacy Policy</h2>
-                                                                            <p>The BloodBankIndia.net team is committed to protecting the rights of all visitors to our website. We recognize our obligation to keep personal information secure and have created this privacy statement to share our information gathering and dissemination practices for this website. We also assure you that none of your registered information will be shared with any third parties outside the BloodBankIndia.net or the parent company uSiS Technologies. However, the information that you have agreed to broadcast during the process of registration will be available for the public view. </p>
-                                                                            <h2>Collection and Use of On-line Information </h2>
-                                                                            <p>Our web server automatically collects your IP address when you visit our site. (Your IP address is your computer's unique address that lets other computers attached to the Internet know where to send data, but does not identify you individually). We use your IP address to help diagnose problems with our server and to compile statistics on site usage. We do not make your IP address available to anyone. From time to time, we may also use cookies on your web browser to store some of the user preference, this cookie will communicate only with this website and if you wish not have them saved, you may have them deleted from your computer using your browser&rsquo;s settings. When you visit certain areas of this site including the registration form, you may be asked to provide personal information (such as name, address, e-mail address, and phone number) that we need to process your request. In the event that you decline to provide such information, we will be unable to process your request. Still, we invite you to continue to visit the site and take advantage of the wealth of information it offers. Every site user who provides us with personal information has the right to inspect, amend, or correct his/her own personal information. You may do so either online by logging in, if you are a registered user, or through simply contacting us using the details posted on the &lsquo;contact us&rsquo; page on our website. </p>
-                                                                            <h2>Other Websites, Links and Resources </h2>
-                                                                            <p>This privacy policy extends to this website (<a href="../index.html">www.bloodbankindia.net</a>) only. If you link to another individual or entity's website through our website or re-directed from our website, you should read the privacy policy specific to that website to determine their practices. If you have any questions or concerns about the online policy for this site or its implementation you may contact us using the details posted on the &lsquo;contact us&rsquo; page on our website. </p>
-                                                                            <h2>Terms of use </h2>
-                                                                            <p>This is purely a non-profit website directed towards the welfare of our community. Any individual or entity that enrolls for our service does so with his/her own will and at no obligation to any one else or any other entity. We seriously condemn the use of this website for any commercial purpose, including solicitation for commercial gain based on the contact details posted by the registered users. We take the privacy of our users very seriously and therefore reserve the right to pursue a legal action against the individuals or entities violating our terms of use. </p>
-                                                                            <h2>Use of Donations</h2>
-                                                                            <p> We do accept funds in form of donation from those who volunteer themselves to do so; such funds collected will be used for running blood camps at select locations and for covering the part of the administrative expenses at running the website. </p>
-                                                                            <h2>Complaints Procedure </h2>
-                                                                            <p>Anyone who experiences a problem with the service provided by BloodBankIndia.net should raise the matter directly using our online contact us form, giving sufficient information to locate the material (such as an url) and clearly outlining the grounds for complaint. BloodBankIndia.net team will approach the individual responsible for the material in question with a view to resolving the matter to the satisfaction of the complainant. The formal complaints procedure should only be used where the complainant feels that the nature of the complaint is too serious to be dealt with informally, or where a satisfactory conclusion has not been reached after following the informal procedure. A formal complaint should be made in writing to BloodBankIndia.net team, who will acknowledge receipt and ensure that the matter is looked into at the earliest possible. An initial response to any complaint can be expected within seven days of its receipt; a full and considered response to the complaint should be completed within 30 days and any subsequent remedy implemented with the minimum of delay.</p>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- model-body -->
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                            <input type="checkbox" value="accept" name="accept_terms" /> I agree to have my contact details broadcasted to the registered donors of BloodBankIndia.net </label>
                                     </div>
                                 </div>
-                                <div class="control-group mob-con-border">
+                                <div class="mob-con-border control-group">
                                     <div class="controls btn-bbi-group">
-                                        <button type="submit" class="btn btn-danger btn-bbi">Register</button>
+                                        <button type="submit" class="btn btn-danger btn-bbi">Submit Request</button>
                                         <br/> </div>
                                 </div>
                             </form>
                         </div>
+                        <div class="row"> </div>
                     </div>
                 </div>
-                <!-- Left side -->
             </div>
         </div>
+        <!-- row -->
     </div>
-    <!-- register-main-contant -->
+    <!-- request-main-content -->
 </body>
-<!-- Mirrored from www.bloodbankindia.net/donors/register by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 08 Nov 2019 09:28:55 GMT -->
+<!-- Mirrored from www.bloodbankindia.net/tools/requestblood by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 08 Nov 2019 09:28:56 GMT -->
 
 </html>
+<!--<script type="text/javascript"> $(document).ready(function() { $('input[title]').tooltip({trigger: 'focus',placement:'right'}); }) </script> <script> $(document).ready(function(){ $('#blood').tooltip({title:'Please select your Bloodgroup',trigger: 'focus',placement:'right'}); }); </script> <script> $(document).ready(function(){ $('#city_name').tooltip({title:'Please select your City',trigger: 'focus',placement:'right'}); }); </script>-->
+<!--include jQuery Validation Plugin-->
 <script src="../../ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/jquery.validate.min.js" type="text/javascript"></script>
+<!--Optional: include only if you are using the extra rules in additional-methods.js -->
 <script src="../../ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/additional-methods.min.js" type="text/javascript"></script>
 <script>
+    $(function() {
+        jQuery.validator.addMethod("lettersonly", function(value) {
+            return /^[a-zA-Z\s]+$/.test(value);
+        }, "Only alphabetical characters");
+        jQuery.validator.addMethod("select1", function(value, element) {
+            if (element.value == "0") {
+                return false;
+            } else {
+                return true;
+            }
+        }, "Please select an option.");
+        $("#request_blood").validate({
+            ignore: [],
+            rules: {
+                patient_name: {
+                    required: true,
+                    minlength: 3,
+                    maxlength: 20,
+                    lettersonly: true
+                },
+                blood: {
+                    select1: true,
+                    required: true,
+                },
+                city_name: {
+                    select1: true,
+                    required: true,
+                },
+                hospital_detail: {
+                    required: true
+                },
+                doctor_name: {
+                    required: true
+                },
+                contact_name: {
+                    required: true
+                },
+                when_require: {
+                    required: true
+                },
+                contact_number: {
+                    required: true,
+                    minlength: 10
+                },
+                contact_emailid: {
+                    required: true
+                },
+                accept_terms: {
+                    required: true
+                }
+            },
+            messages: {
+                patient_name: {
+                    required: "Please enter the name",
+                    minlength: "Name should atleast 3 letter",
+                    maxlength: "Name should not exceed 20 letter",
+                    lettersonly: "Name should have only alphabets letter and space "
+                },
+                blood: {
+                    required: "Please select blood group",
+                    select1: "Please select blood group"
+                },
+                city_name: {
+                    required: "Please select blood group",
+                    select1: "Please select your city"
+                },
+                hospital_detail: {
+                    required: "Please enter hosptal name"
+                },
+                doctor_name: {
+                    required: "Please enter doctor name"
+                },
+                contact_name: {
+                    required: "Please enter contact name"
+                },
+                when_require: {
+                    required: "Please enter the date when blood require"
+                },
+                contact_number: {
+                    required: "Please enter phonenumber",
+                    minlength: "Phonenumber not in correct format",
+                },
+                contact_emailid: {
+                    required: "Please enter the email"
+                },
+                accept_terms: {
+                    required: "Please agree"
+                }
+            }
+        });
+    });
+    $(".control-group .input-group select").addClass("form-control");
+</script>
+<script>
     $(document).ready(function() {
-        $('#register #city_name,#blood').select2({
+        $('#request_blood select').select2({
             placeholder: ''
         });
         $('button[data-select2-open]').click(function() {
@@ -1058,132 +960,6 @@
         });
     });
 </script>
-<script>
-    $.validator.addMethod('numericOnly', function(value) {
-        return /^([0-9\.])+$/.test(value);
-    }, 'Please only enter numeric values (0-9.)');
-    jQuery.validator.addMethod("lettersonly", function(value) {
-        return /^[a-zA-Z\s]+$/.test(value);
-    }, "Only alphabetical characters");
-    jQuery.validator.addMethod("select1", function(value, element) {
-        if (element.value == "0") {
-            return false;
-        } else {
-            return true;
-        }
-    }, "Please select an option.");
-    $(function() {
-        $("#register").validate({
-            ignore: [],
-            rules: {
-                donor_name: {
-                    required: true,
-                    minlength: 3,
-                    maxlength: 20,
-                    lettersonly: true
-                },
-                password: {
-                    required: true,
-                    minlength: 8,
-                    maxlength: 15
-                },
-                cpassword: {
-                    required: true,
-                },
-                dob: {
-                    required: true
-                },
-                blood: {
-                    select1: true,
-                    required: true,
-                },
-                how_often: {
-                    select1: true,
-                },
-                city_name: {
-                    select1: true,
-                    required: true,
-                },
-                mob_no: {
-                    required: true,
-                    minlength: 10,
-                    maxlength: 10
-                },
-                weight: {
-                    required: true,
-                    numericOnly: true,
-                    maxlength: 5
-                },
-                emailid: {
-                    required: true,
-                    email: true
-                },
-                address1: {
-                    required: true
-                } /*gender:{ required:true }*/
-            },
-            messages: {
-                donor_name: {
-                    required: "Please enter your name",
-                    minlength: "Name should atleast 3 letter",
-                    maxlength: "Name should not exceed 30 letter",
-                    lettersonly: "Name should have only alphabets letter and space "
-                },
-                password: {
-                    required: "Please enter your password",
-                    minlength: "Password should atleast 8 letter",
-                    maxlength: "Password should not exceed 20 letter"
-                },
-                cpassword: {
-                    required: "Please enter confirm password",
-                },
-                dob: {
-                    required: "Please enter your date of birth"
-                },
-                mob_no: {
-                    required: "Please enter your mobile number",
-                    minlength: "Please enter valid mobile number"
-                },
-                address1: {
-                    required: "Please enter your address"
-                },
-                blood: {
-                    required: "Please select your blood group"
-                },
-                weight: {
-                    required: "Please enter your weight",
-                    numericOnly: "You should enter only number ",
-                    maxlength: "Weight should be in 5 digits"
-                },
-                city_name: {
-                    required: "Please select your city",
-                    select1: "Please select your city"
-                },
-                emailid: {
-                    required: "Please enter your email"
-                },
-                /*gender:{ required:"Please select your gender" }*/
-            }
-        });
-    });
-    $(".control-group .input-group select").addClass("form-control");
-</script>
-<script>
-    // $( '.lastdonated' ).click( function () // { //   var lastdonated = $('.lastdonated').val(); //   if(lastdonated == 'yet-to-donate') //   { //    $('.blooddonateddate').css('display','none'); //    } //    else if(lastdonated == '0') //  { //    $('.blooddonateddate').css('display','none'); //    } //    else // { //    $('.blooddonateddate').css('display','block'); //   } // });
-</script>
-<script>
-    $(function() {
-        $('#row_dim').hide();
-        $('#type').change(function() {
-            if ($('#type').val() == 'Regular donor') {
-                $('#row_dim').show();
-            } else if ($('#type').val() == 'On need basis') {
-                $('#row_dim').show();
-            } else {
-                $('#row_dim').hide();
-            }
-        });
-    });
-</script>
 
-    @stop
+
+@stop

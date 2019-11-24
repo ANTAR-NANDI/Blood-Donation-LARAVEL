@@ -5,15 +5,15 @@
                 <div class="footer-widget">
                     <!-- <h4 class="footer-widget-title">Quick Links</h4> -->
                     <ul class="list-links">
-                        <li><a href="{{ URL::to('/') }}">Search Donors</a></li>
-                        <li><a href="{{ URL::to('User/about') }}">About Us</a></li>
+                        <li><a href="{{ URL::to('index') }}">Search Donors</a></li>
+                        <li><a href="{{ URL::to('about') }}">About Us</a></li>
                         <!-- <li><a href="https://www.bloodbankindia.net/donors/register">Donor Registration</a></li> </li> -->
                         <!-- <li><a href="https://www.bloodbankindia.net/donors/search">Search Donors</a></li> -->
-                        <li><a href="{{ URL::to('User/register') }}">Register As Donor </a></li>
-                        <li><a href="{{ URL::to('User/request') }}">Request Blood</a></li>
-                        <li><a href="{{ URL::to('User/tips') }}">Blood Tips</a></li>
-                        <li><a href="{{ URL::to('User/privacy') }}">Privacy Policy</a></li>
-                        <p class="small-text"> <a href="https://www.linkedin.com/in/antar-nandi-211392118/"><strong>Linkedin</strong></a> People Project from <a href="http://www.aniksen.me/" target="_blank"><strong>Antar Nandi</strong></a> All rights reserved &copy; 2019</p>
+                        <li><a href="{{ URL::to('register') }}">Register As Donor </a></li>
+                        <li><a href="{{ URL::to('request') }}">Request Blood</a></li>
+                        <li><a href="{{ URL::to('tips') }}">Blood Tips</a></li>
+                        <li><a href="{{ URL::to('privacy') }}">Privacy Policy</a></li>
+                        <p class="small-text"> <a href="index.html"><strong>BloodBankIndia.net</strong></a> People Project from <a href="http://www.usistech.com/" target="_blank"><strong>uSiS Technologies.</strong></a> All rights reserved &copy; 2017</p>
                     </ul>
                 </div>
                 <!-- footer-widget -->
