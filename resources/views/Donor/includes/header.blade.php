@@ -50,9 +50,8 @@
                         <ul class="main-menu sf-menu">
                             <li class=""><a href="{{ URL::to('/') }}" class="hvr-bounce-to-bottom-2 m1-2">Search Donors</a></li>
                             <li class=""><a href="{{ URL::to('User/about') }}" class="hvr-bounce-to-bottom-2 m1-2">About Us</a> </li>
-                            <!-- <li class=""><a href="https://www.bloodbankindia.net/donors/register"class="hvr-bounce-to-bottom-2 m1-2">Donor Registration</a> </li> -->
-                            <!-- <li class=""><a href="https://www.bloodbankindia.net/donors/search">Search Donors</a> </li> -->
-                            <li class=""><a href="{{ URL::to('User/register') }}" class="hvr-bounce-to-bottom-2 m1-2">Register as Donor</a> </li>
+                            
+                            <li class=""><a href="{{ URL::to('logout') }}" class="hvr-bounce-to-bottom-2 m1-2">Logout</a> </li>
                             <li class=""><a href="{{ URL::to('User/request') }}" class="hvr-bounce-to-bottom-2 m1-2">Request Blood</a> </li>
                             <li class=""><a href="{{ URL::to('User/tips') }}" class="hvr-bounce-to-bottom-2 m1-2">Blood Tips</a></li>
                             <li class=""><a href="{{ URL::to('User/contact') }}" class="hvr-bounce-to-bottom-2 m1-2">Contact Us</a></li>

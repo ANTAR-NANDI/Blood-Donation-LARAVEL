@@ -2,16 +2,16 @@
 <html lang="en">
 
 <head>
-  @include('User.includes.head')
+  @include('Donor.includes.head')
 </head>
 
 <body>
 
-  @include('User.includes.header')
+  @include('Donor.includes.header')
   
   @yield('abc')
 
-  @include('User.includes.footer')
+  @include('Donor.includes.footer')
 
 </body>
 

@@ -16,8 +16,8 @@
                 <div class="header-right">
 
                     <div class="header-login-left">
-                        <form class="form-horizontal" method="post" action="https://www.bloodbankindia.net/donors/login_action" id="login_user">
-                            <ul class="nav nav-pills">
+                        <form class="form-horizontal" method="post" action="{{ URL::to('login') }}" id="login_user">
+                            @csrf                            <ul class="nav nav-pills">
                                 <li>
                                     <label>Email/Mobile Number</label>
                                     <input type="text" id="emailid" name="emailid" rel="tooltip" value="" title="Email can contain only letters, numbers, periods (.), @, hyphens (-) and underscores (_)."> </li>
@@ -28,6 +28,11 @@
                                     <button type="submit" class="btn btn-danger login-form-head">Login</button>
                                 </li>
                                 <a href="donors/forgotpassword.html" class="forgot">Forgot password?</a>
+                                <!-- @if(Session::has('msg'))
+                                <div class="alert alert-danger">
+                                    <strong>{{ Session::get('msg') }}</strong>
+                                </div>
+                                @endif -->
                             </ul>
                         </form>
                     </div>
@@ -48,14 +53,18 @@
                 <div class="row">
                     <nav class="main-navigation clearfix visible-md visible-lg" id="bs-example-navbar-collapse-1" role="navigation">
                         <ul class="main-menu sf-menu">
-                            <li class=""><a href="{{ URL::to('/') }}" class="hvr-bounce-to-bottom-2 m1-2">Search Donors</a></li>
+                            <li class=""><a href="{{ URL::to('/') }}" class="hvr-bounce-to-bottom-2 m1-2">Search Donor</a></li>
                             <li class=""><a href="{{ URL::to('User/about') }}" class="hvr-bounce-to-bottom-2 m1-2">About Us</a> </li>
-                            <!-- <li class=""><a href="https://www.bloodbankindia.net/donors/register"class="hvr-bounce-to-bottom-2 m1-2">Donor Registration</a> </li> -->
-                            <!-- <li class=""><a href="https://www.bloodbankindia.net/donors/search">Search Donors</a> </li> -->
+                            
                             <li class=""><a href="{{ URL::to('User/register') }}" class="hvr-bounce-to-bottom-2 m1-2">Register as Donor</a> </li>
                             <li class=""><a href="{{ URL::to('User/request') }}" class="hvr-bounce-to-bottom-2 m1-2">Request Blood</a> </li>
                             <li class=""><a href="{{ URL::to('User/tips') }}" class="hvr-bounce-to-bottom-2 m1-2">Blood Tips</a></li>
                             <li class=""><a href="{{ URL::to('User/contact') }}" class="hvr-bounce-to-bottom-2 m1-2">Contact Us</a></li>
+                     
+
+
+
+
                         </ul>
                         <!-- /.main-menu -->
                     </nav>
@@ -115,6 +124,11 @@
                     <li class=""><a href="tools/requestblood.html">Request Blood</a> </li>
                     <li class=""><a href="information/blooddonationtips.html">Blood Tips</a></li>
                     <li class=""><a href="contactus.html">Contact Us</a></li>
+
+
+
+
+
             </ul>
             <!-- /.main-menu -->
         </div>
@@ -124,71 +138,4 @@
     <script src="../ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/jquery.validate.min.js" type="text/javascript"></script>
     <!--Optional: include only if you are using the extra rules in additional-methods.js -->
     <script src="../ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/additional-methods.min.js" type="text/javascript"></script>
-    <script>
-        $.validator.addMethod('numericOnly', function(value) {
-            return /^[0-9]+$/.test(value);
-        }, 'Please only enter numeric values (0-9)');
-        jQuery.validator.addMethod("lettersonly", function(value) {
-            return /^[a-z\s]+$/.test(value);
-        }, "Only alphabetical characters");
-        jQuery.validator.addMethod("select1", function(value, element) {
-            if (element.value == "0") {
-                return false;
-            } else {
-                return true;
-            }
-        }, "Please select an option.");
-        $(function() {
-                    $("#login_user").validate({
-                                ignore: [],
-                                rules: {
-                                    password: {
-                                        required: true,
-                                        minlength: 8,
-                                        maxlength: 15
-                                    },
-                                    emailid: {
-                                        required: true, //email:true  } },  messages:{  password:{  required:"Please enter your password",  minlength:"Password should atleast 8 letter", maxlength:"Password should not exceed 20 letter"  },  emailid:{ required:"Please enter your email/mobile number"  } } }); }); $( ".control-group .input-group select" ).addClass( "form-control" );
-    </script>
-    <script>
-        $.validator.addMethod('numericOnly', function(value) {
-            return /^[0-9]+$/.test(value);
-        }, 'Please only enter numeric values (0-9)');
-        jQuery.validator.addMethod("lettersonly", function(value) {
-            return /^[a-z\s]+$/.test(value);
-        }, "Only alphabetical characters");
-        jQuery.validator.addMethod("select1", function(value, element) {
-            if (element.value == "0") {
-                return false;
-            } else {
-                return true;
-            }
-        }, "Please select an option.");
-        $(function() {
-            $("#login_user_mobile").validate({
-                ignore: [],
-                rules: {
-                    password: {
-                        required: true,
-                        minlength: 8,
-                        maxlength: 15
-                    },
-                    emailid: {
-                        required: true,
-                        email: true
-                    }
-                },
-                messages: {
-                    password: {
-                        required: "Please enter your password",
-                        minlength: "Password should atleast 8 letter",
-                        maxlength: "Password should not exceed 20 letter"
-                    },
-                    emailid: {
-                        required: "Please enter your email"
-                    }
-                }
-            });
-        });
-        $(".control-group .input-group select").addClass("form-control");
-    </script>
+    

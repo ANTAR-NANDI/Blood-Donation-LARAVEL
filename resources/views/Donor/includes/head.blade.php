@@ -2,9 +2,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Blood Bank India is a product resulted out of the community welfare initiative to find the blood donor in your city.">
     <div style="display: none;" itemscope itemtype="http://schema.org/Person">
-        <span itemprop="name">Admin</span> <span itemprop="company">Blood Bank India</span>
-        <span itemprop="tel">0422 2461790</span>
-        <a itemprop="email" href="mailto:info@bloodbankindia.net">infodotbloodbankindia.net</a>
+        <span itemprop="name">Donor Area</span> <span itemprop="company">Blood Bank Bangladesh</span>
+        <span itemprop="tel">01824506162</span>
+        <a itemprop="email" href="mailto:dreamgirl9931@gmail.com">bddonor.net</a>
     </div>
    <link href="{{ asset('website/bbi_theme/style.css') }}" rel="stylesheet" media="screen" />
 
@@ -33,4 +33,4 @@
     </script>
     <script src='../www.google.com/recaptcha/api.js'>
     </script>
-    <title>Blood Donation</title>
+    <title>Blood Donation Website</title>
