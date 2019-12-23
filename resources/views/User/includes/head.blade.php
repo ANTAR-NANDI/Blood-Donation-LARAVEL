@@ -7,6 +7,8 @@
         <a itemprop="email" href="mailto:info@bloodbankindia.net">infodotbloodbankindia.net</a>
     </div>
    <link href="{{ asset('website/bbi_theme/style.css') }}" rel="stylesheet" media="screen" />
+   <!-- <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet"> -->
+
 
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ asset('website/bbi_theme/images/ico/apple-touch-icon-114-precomposed.html') }}" />
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ asset('website/bbi_theme/images/ico/apple-touch-icon-72-precomposed.html') }}" />
@@ -39,4 +41,7 @@
     </script>
     <script src='../www.google.com/recaptcha/api.js'>
     </script>
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> -->
+
+<!-- <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script> -->
     <title>Blood Donors Club</title>

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRequestsTable extends Migration
+class CreateRequestBloodsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateRequestsTable extends Migration
      */
     public function up()
     {
-        Schema::create('requests', function (Blueprint $table) {
+        Schema::create('request_bloods', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('patientname');
+             $table->string('patientname');
             $table->string('hospitaladdress');
             $table->string('blood');
             
@@ -26,12 +26,11 @@ class CreateRequestsTable extends Migration
                  $table->date('required');
                 $table->string('message');
                 $table->string('contactemail');
-                $table->boolean('contactname');
+                $table->string('contactname');
              $table->bigInteger('user_id')->unsigned()->index();
             $table->foreign('user_id')
                    ->references('id')->on('registrations')
                    ->onDelete('cascade');
-
             $table->timestamps();
         });
     }
@@ -43,6 +42,6 @@ class CreateRequestsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('requests');
+        Schema::dropIfExists('request_bloods');
     }
 }

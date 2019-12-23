@@ -13,105 +13,53 @@
                         </script>
                     </div>
                     <!-- ads -->
-                    <div class="tab-widget">
-                        <ul class="nav nav-tabs">
-                            <li class="active"><a href="#BLOOD-REQUESTS">BLOOD <span>REQUESTS</span></a></li>
-                            <li><a href="#RECENT-DONORS">RECENT <span>DONORS</span></a></li>
-                            <li><a href="#QUICK">QUICK <span>TIP</span></a></li>
-                        </ul>
-                        <div class="tab-content">
-                            <div id="BLOOD-REQUESTS" class="tab-pane fade in active">
-                                <div class="widget-main">
-                                    <div class="widget-inner">
-                                        <div class='blood-req-widget'>
-                                            <div class='b-group2'>
-                                                <div class='sub-b-group-1'> <i class='fa fa-user'></i>&nbsp<b>Sananda Chakraborty </b>&nbsp <i class='fa fa-map-marker'></i>&nbspDurgapur </div>
-                                                <div class='sub-b-group-2'> <i class='fa fa-question-circle'></i>&nbsp27-11-2019&nbsp&nbsp&nbsp<i class='fa fa-clock-o'></i>&nbsp3 days ago </div>
-                                                <div class='sub-b-group-3'> </div>
-                                            </div>
-                                            <div class='b-group3'>
-                                                <div class='b-group'>A- </div>
-                                                <br>
-                                                <div class='sub-b-group-4'>
-                                                    <a data-toggle='tooltip' data-placement='top' title='View Details' href=../tools/req/2059.html> <i class='fa fa-search' aria-hidden='true'></i> </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class='blood-req-widget'>
-                                            <div class='b-group2'>
-                                                <div class='sub-b-group-1'> <i class='fa fa-user'></i>&nbsp<b>Sananda Chakraborty </b>&nbsp <i class='fa fa-map-marker'></i>&nbspDurgapur </div>
-                                                <div class='sub-b-group-2'> <i class='fa fa-question-circle'></i>&nbsp27-11-2019&nbsp&nbsp&nbsp<i class='fa fa-clock-o'></i>&nbsp3 days ago </div>
-                                                <div class='sub-b-group-3'> </div>
-                                            </div>
-                                            <div class='b-group3'>
-                                                <div class='b-group'>A- </div>
-                                                <br>
-                                                <div class='sub-b-group-4'>
-                                                    <a data-toggle='tooltip' data-placement='top' title='View Details' href=../tools/req/2058.html> <i class='fa fa-search' aria-hidden='true'></i> </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class='blood-req-widget'>
-                                            <div class='b-group2'>
-                                                <div class='sub-b-group-1'> <i class='fa fa-user'></i>&nbsp<b>PG Rajendran </b>&nbsp <i class='fa fa-map-marker'></i>&nbspHyderabad, Andhra Pradesh </div>
-                                                <div class='sub-b-group-2'> <i class='fa fa-question-circle'></i>&nbsp01-11-2019&nbsp&nbsp&nbsp<i class='fa fa-clock-o'></i>&nbsp8 days ago </div>
-                                                <div class='sub-b-group-3'> </div>
-                                            </div>
-                                            <div class='b-group3'>
-                                                <div class='b-group'>AB+ </div>
-                                                <br>
-                                                <div class='sub-b-group-4'>
-                                                    <a data-toggle='tooltip' data-placement='top' title='View Details' href=../tools/req/2057.html> <i class='fa fa-search' aria-hidden='true'></i> </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class='blood-req-widget'>
-                                            <div class='b-group2'>
-                                                <div class='sub-b-group-1'> <i class='fa fa-user'></i>&nbsp<b>Bipin Bhai Joshi </b>&nbsp <i class='fa fa-map-marker'></i>&nbspAhmedabad </div>
-                                                <div class='sub-b-group-2'> <i class='fa fa-question-circle'></i>&nbsp30-10-2019&nbsp&nbsp&nbsp<i class='fa fa-clock-o'></i>&nbsp9 days ago </div>
-                                                <div class='sub-b-group-3'> </div>
-                                            </div>
-                                            <div class='b-group3'>
-                                                <div class='b-group'>A+ </div>
-                                                <br>
-                                                <div class='sub-b-group-4'>
-                                                    <a data-toggle='tooltip' data-placement='top' title='View Details' href=../tools/req/2056.html> <i class='fa fa-search' aria-hidden='true'></i> </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- /.widget-inner -->
-                                </div>
-                                <!-- /.widget-main -->
-                            </div>
-                            <div id="RECENT-DONORS" class="tab-pane fade">
-                                <div class="widget-main">
-                                    <div class="widget-inner">
-                                        <div class='blood-req-widget'>
-                                            <div class='rec-b-group'>B+ </div>
-                                            <div class='rec-b-name'><b style='font-family:HelveticaNeue-Bold;'>Shubham Tyagi </b> (Ghaziabad)
-                                                <br/> 3 hours ago </div>
-                                        </div>
-                                        <div class='blood-req-widget'>
-                                            <div class='rec-b-group'>B+ </div>
-                                            <div class='rec-b-name'><b style='font-family:HelveticaNeue-Bold;'>Dhruv Ajay Sureka </b> (Mumbai)
-                                                <br/> 5 hours ago </div>
-                                        </div>
-                                        <div class='blood-req-widget'>
-                                            <div class='rec-b-group'>A+ </div>
-                                            <div class='rec-b-name'><b style='font-family:HelveticaNeue-Bold;'>Shruthi PK </b> (Bangalore)
-                                                <br/> 12 hours ago </div>
-                                        </div>
-                                        <div class='blood-req-widget'>
-                                            <div class='rec-b-group'>O- </div>
-                                            <div class='rec-b-name'><b style='font-family:HelveticaNeue-Bold;'>Anand Yadav </b> (Mumbai)
-                                                <br/> 1 day ago </div>
-                                        </div>
-                                    </div>
-                                    <!-- /.widget-inner -->
-                                </div>
-                                <!-- /.widget-main -->
-                            </div>
+                    <div class="tab-widget" >
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#BLOOD-REQUESTS">BLOOD <span>REQUESTS</span></a></li>
+            <li><a href="#RECENT-DONORS">RECENT <span>DONORS</span></a></li>
+            <li><a href="#QUICK">QUICK <span>TIP</span></a></li>
+        </ul>
+        <div class="tab-content">
+            <div id="BLOOD-REQUESTS" class="tab-pane fade in active">
+                <div class="widget-main">
+                    <div class="widget-inner">
+      @foreach($request as $r)
+                <div class='blood-req-widget scrollpar'>
+                    <div class='b-group2'>
+                        <div class='sub-b-group-1'> <i class='fa fa-user'></i>&nbsp<b>{{$r->patientname}}</b>&nbsp <i class='fa fa-map-marker'></i>&nbsp{{$r->city}}</div>
+                        <div class='sub-b-group-2'> <i class='fa fa-question-circle'></i>&nbsp{{$r->required}}&nbsp&nbsp&nbsp<i class='fa fa-clock-o'></i>&nbsp{{$r->required}}</div>
+                        <div class='sub-b-group-3'> </div>
+                    </div>
+                    <div class='b-group3'>
+                        <div class='b-group'>{{$r->blood}} </div>
+                        <br>
+                        <div class='sub-b-group-4'>
+                            <a data-toggle='tooltip' data-placement='top' title='View Details' href=tools/req/2059.html> <i class='fa fa-search' aria-hidden='true'></i> </a>
+                        </div>
+                 </div>
+                </div>
+    
+     @endforeach
+                    </div>
+                    <!-- /.widget-inner -->
+                </div>
+                <!-- /.widget-main -->
+            </div>
+            <div id="RECENT-DONORS" class="tab-pane fade">
+                <div class="widget-main" >
+                    <div class="widget-inner">
+                        @foreach($donor as $d)
+                         <div class='blood-req-widget'>
+                            <div class='rec-b-group'>{{$d->blood}} </div>
+                            <div class='rec-b-name'><b style='font-family:HelveticaNeue-Bold;'>{{$d->fullname}} </b> ({{$d->city}})
+                                <br/>{{$d->updated_at}}</div>
+                        </div>
+                         @endforeach
+                    </div>
+                    <!-- /.widget-inner -->
+                </div>
+                <!-- /.widget-main -->
+            </div>
                             <div id="QUICK" class="tab-pane fade">
                                 <div class="widget-main">
                                     <div class="widget-main-title">

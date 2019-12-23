@@ -98,85 +98,137 @@
                         </script>
                     </div>
                     <!-- ads -->
-    <div class="tab-widget" >
-        <ul class="nav nav-tabs">
-            <li class="active"><a href="#BLOOD-REQUESTS">BLOOD <span>REQUESTS</span></a></li>
-            <li><a href="#RECENT-DONORS">RECENT <span>DONORS</span></a></li>
-            <li><a href="#QUICK">QUICK <span>TIP</span></a></li>
-        </ul>
-        <div class="tab-content">
-            <div id="BLOOD-REQUESTS" class="tab-pane fade in active">
-                <div class="widget-main">
-                    <div class="widget-inner">
-      @foreach($request as $r)
-                <div class='blood-req-widget scrollpar'>
-                    <div class='b-group2'>
-                        <div class='sub-b-group-1'> <i class='fa fa-user'></i>&nbsp<b>{{$r->patientname}}</b>&nbsp <i class='fa fa-map-marker'></i>&nbsp{{$r->city}}</div>
-                        <div class='sub-b-group-2'> <i class='fa fa-question-circle'></i>&nbsp{{$r->required}}&nbsp&nbsp&nbsp<i class='fa fa-clock-o'></i>&nbsp{{$r->required}}</div>
-                        <div class='sub-b-group-3'> </div>
-                    </div>
-                    <div class='b-group3'>
-                        <div class='b-group'>{{$r->blood}} </div>
-                        <br>
-                        <div class='sub-b-group-4'>
-                            <a data-toggle='tooltip' data-placement='top' title='View Details' href=tools/req/2059.html> <i class='fa fa-search' aria-hidden='true'></i> </a>
+                    <div class="tab-widget" >
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#BLOOD-REQUESTS">BLOOD <span>REQUESTS</span></a></li>
+                            <li><a href="#RECENT-DONORS">RECENT <span>DONORS</span></a></li>
+                            <li><a href="#QUICK">QUICK <span>TIP</span></a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="BLOOD-REQUESTS" class="tab-pane fade in active">
+                                <div class="widget-main">
+                                    <div class="widget-inner">
+                                        <div class='blood-req-widget'>
+                                            <div class='b-group2'>
+                                                <div class='sub-b-group-1'> <i class='fa fa-user'></i>&nbsp<b>Sananda Chakraborty </b>&nbsp <i class='fa fa-map-marker'></i>&nbspDurgapur </div>
+                                                <div class='sub-b-group-2'> <i class='fa fa-question-circle'></i>&nbsp27-11-2019&nbsp&nbsp&nbsp<i class='fa fa-clock-o'></i>&nbsp3 days ago </div>
+                                                <div class='sub-b-group-3'> </div>
+                                            </div>
+                                            <div class='b-group3'>
+                                                <div class='b-group'>A- </div>
+                                                <br>
+                                                <div class='sub-b-group-4'>
+                                                    <a data-toggle='tooltip' data-placement='top' title='View Details' href=req/2059.html> <i class='fa fa-search' aria-hidden='true'></i> </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class='blood-req-widget'>
+                                            <div class='b-group2'>
+                                                <div class='sub-b-group-1'> <i class='fa fa-user'></i>&nbsp<b>Sananda Chakraborty </b>&nbsp <i class='fa fa-map-marker'></i>&nbspDurgapur </div>
+                                                <div class='sub-b-group-2'> <i class='fa fa-question-circle'></i>&nbsp27-11-2019&nbsp&nbsp&nbsp<i class='fa fa-clock-o'></i>&nbsp3 days ago </div>
+                                                <div class='sub-b-group-3'> </div>
+                                            </div>
+                                            <div class='b-group3'>
+                                                <div class='b-group'>A- </div>
+                                                <br>
+                                                <div class='sub-b-group-4'>
+                                                    <a data-toggle='tooltip' data-placement='top' title='View Details' href=req/2058.html> <i class='fa fa-search' aria-hidden='true'></i> </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class='blood-req-widget'>
+                                            <div class='b-group2'>
+                                                <div class='sub-b-group-1'> <i class='fa fa-user'></i>&nbsp<b>PG Rajendran </b>&nbsp <i class='fa fa-map-marker'></i>&nbspHyderabad, Andhra Pradesh </div>
+                                                <div class='sub-b-group-2'> <i class='fa fa-question-circle'></i>&nbsp01-11-2019&nbsp&nbsp&nbsp<i class='fa fa-clock-o'></i>&nbsp8 days ago </div>
+                                                <div class='sub-b-group-3'> </div>
+                                            </div>
+                                            <div class='b-group3'>
+                                                <div class='b-group'>AB+ </div>
+                                                <br>
+                                                <div class='sub-b-group-4'>
+                                                    <a data-toggle='tooltip' data-placement='top' title='View Details' href=req/2057.html> <i class='fa fa-search' aria-hidden='true'></i> </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class='blood-req-widget'>
+                                            <div class='b-group2'>
+                                                <div class='sub-b-group-1'> <i class='fa fa-user'></i>&nbsp<b>Bipin Bhai Joshi </b>&nbsp <i class='fa fa-map-marker'></i>&nbspAhmedabad </div>
+                                                <div class='sub-b-group-2'> <i class='fa fa-question-circle'></i>&nbsp30-10-2019&nbsp&nbsp&nbsp<i class='fa fa-clock-o'></i>&nbsp9 days ago </div>
+                                                <div class='sub-b-group-3'> </div>
+                                            </div>
+                                            <div class='b-group3'>
+                                                <div class='b-group'>A+ </div>
+                                                <br>
+                                                <div class='sub-b-group-4'>
+                                                    <a data-toggle='tooltip' data-placement='top' title='View Details' href=req/2056.html> <i class='fa fa-search' aria-hidden='true'></i> </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /.widget-inner -->
+                                </div>
+                                <!-- /.widget-main -->
+                            </div>
+                            <div id="RECENT-DONORS" class="tab-pane fade">
+                                <div class="widget-main" >
+                                    <div class="widget-inner">
+                                        <div class='blood-req-widget'>
+                                            <div class='rec-b-group'>B+ </div>
+                                            <div class='rec-b-name'><b style='font-family:HelveticaNeue-Bold;'>Shubham Tyagi </b> (Ghaziabad)
+                                                <br/> 3 hours ago </div>
+                                        </div>
+                                        <div class='blood-req-widget'>
+                                            <div class='rec-b-group'>B+ </div>
+                                            <div class='rec-b-name'><b style='font-family:HelveticaNeue-Bold;'>Dhruv Ajay Sureka </b> (Mumbai)
+                                                <br/> 5 hours ago </div>
+                                        </div>
+                                        <div class='blood-req-widget'>
+                                            <div class='rec-b-group'>A+ </div>
+                                            <div class='rec-b-name'><b style='font-family:HelveticaNeue-Bold;'>Shruthi PK </b> (Bangalore)
+                                                <br/> 12 hours ago </div>
+                                        </div>
+                                        <div class='blood-req-widget'>
+                                            <div class='rec-b-group'>O- </div>
+                                            <div class='rec-b-name'><b style='font-family:HelveticaNeue-Bold;'>Anand Yadav </b> (Mumbai)
+                                                <br/> 1 day ago </div>
+                                        </div>
+                                    </div>
+                                    <!-- /.widget-inner -->
+                                </div>
+                                <!-- /.widget-main -->
+                            </div>
+                            <div id="QUICK" class="tab-pane fade">
+                                <div class="widget-main">
+                                    <div class="widget-main-title">
+                                        <h4 class="widget-title">What you should eat before donating blood </h4> </div>
+                                    <!-- /.widget-main-title -->
+                                    <div class="widget-inner">
+                                        <p>A healthy diet helps ensure a successful blood donation, and also makes you feel better!
+                                            <br/> Check out the following recommended foods to eat prior to your donation.</p>
+                                        <table border="0" cellpadding="5" cellspacing="0" class="ULtable">
+                                            <tr>
+                                                <td><img src="../bbi_theme/images/arrow.jpg" width="8" height="5" /></td>
+                                                <td>Low fat foods</td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="../bbi_theme/images/arrow.jpg" width="8" height="5" /></td>
+                                                <td>Iron rich foods</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- /.widget-main -->
+                            </div>
                         </div>
-                 </div>
-                </div>
-    
-     @endforeach
+                        <!-- tab-content -->
                     </div>
-                    <!-- /.widget-inner -->
+                    <!-- tab-widget -->
                 </div>
-                <!-- /.widget-main -->
-            </div>
-            <div id="RECENT-DONORS" class="tab-pane fade">
-                <div class="widget-main" >
-                    <div class="widget-inner">
-                        @foreach($donor as $d)
-                         <div class='blood-req-widget'>
-                            <div class='rec-b-group'>{{$d->blood}} </div>
-                            <div class='rec-b-name'><b style='font-family:HelveticaNeue-Bold;'>{{$d->fullname}} </b> ({{$d->city}})
-                                <br/>{{$d->updated_at}}</div>
-                        </div>
-                         @endforeach
-                    </div>
-                    <!-- /.widget-inner -->
-                </div>
-                <!-- /.widget-main -->
-            </div>
-            <div id="QUICK" class="tab-pane fade">
-                <div class="widget-main">
-                    <div class="widget-main-title">
-                        <h4 class="widget-title">What you should eat before donating blood </h4> </div>
-                    <!-- /.widget-main-title -->
-                    <div class="widget-inner">
-                        <p>A healthy diet helps ensure a successful blood donation, and also makes you feel better!
-                            <br/> Check out the following recommended foods to eat prior to your donation.</p>
-                        <table border="0" cellpadding="5" cellspacing="0" class="ULtable">
-                            <tr>
-                                <td><img src="../bbi_theme/images/arrow.jpg" width="8" height="5" /></td>
-                                <td>Low fat foods</td>
-                            </tr>
-                            <tr>
-                                <td><img src="../bbi_theme/images/arrow.jpg" width="8" height="5" /></td>
-                                <td>Iron rich foods</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-                <!-- /.widget-main -->
-            </div>
-        </div>
-        <!-- tab-content -->
-    </div>
-    <!-- tab-widget -->
-</div>
                 <div class="left-side">
                     <div class="row">
                         <div class="widget-item"> <span class="errspns"> </span>
                             <h2 class="welcome-text">Request Blood</h2>
-                            <form class="form-horizontal" action="{{URL::to('Requestor/request_blood_store')}}" id="request_blood" method="post" id="request_blood">
+                            <form class="form-horizontal" action="{{ URL::to('updaterequest/'.$editrequest->id) }}" id="request_blood" method="post" id="request_blood">
                                 {{csrf_field()}}
                                 <div class="mob-con-border">
                                     <div class="con-border">
@@ -187,13 +239,13 @@
                                                     <div class="control-group">
                                                         <label>Patient Name *</label>
                                                         <div class="input-group">
-                                                            <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1" rel="tooltip" name="patient_name" id="patient_name" value="" title="Please enter Patient Name	Maximum 20 characters."> </div>
+                                                            <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1" rel="tooltip" name="patient_name" id="patient_name" value="{{ $editrequest->patientname }}" title="Please enter Patient Name	Maximum 20 characters."> </div>
                                                     </div>
                                                     <div class="control-group">
                                                         <label>Blood Group *</label>
                                                         <div class="input-group">
                                                             <select name="blood" id="blood">
-                                                                <option value="0">Select </option>
+                                                                <option value="0">{{ $editrequest->blood }}</option>
                                                                 <option value="A+">A+</option>
                                                                 <option value="B+">B+</option>
                                                                 <option value="O+">O+</option>
@@ -210,7 +262,7 @@
                                                         <label>City *</label>
                                                         <div class="input-group">
                                                             <select name="city_name" id="city_name">
-                                                                <option value="0">Select </option>
+                                                                <option value="0">{{ $editrequest->city}} </option>
                                                                 <option value="1">Agartala</option>
                                                                 <option value="2">Agra</option>
                                                                 <option value="3">Ahmedabad</option>
@@ -284,7 +336,7 @@
                                                     <div class="control-group">
                                                         <label>Hospital Name & Address *</label>
                                                         <div class="input-group">
-                                                            <textarea type="textarea" class="form-control" rel="tooltip" name="hospital_detail" id="hospital_detail" placeholder="" value="" title="Type your street address here.	Eg: #23, ABC Street"></textarea>
+                                                            <textarea type="textarea" class="form-control" rel="tooltip" name="hospital_detail" id="hospital_detail" placeholder="aaaa" value="{{ $editrequest->amount}}" title="Type your street address here.	Eg: #23, ABC Street"></textarea>
                                                         </div>
                                                     </div>
                                                    
@@ -292,7 +344,7 @@
                                                 <div class="control-group">
                                                         <label>Amount of Blood*</label>
                                                         <div class="input-group">
-                                                            <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1" name="amount" rel="tooltip" id="doctor_name" value="" title="Plese enter Doctor name"> </div>
+                                                            <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1" name="amount" rel="tooltip" id="doctor_name" value="{{ $editrequest->amount}}" title="Plese enter Doctor name"> </div>
                                                     </div>
 
                                                 </div>
@@ -307,24 +359,24 @@
                                                     <div class="control-group">
                                                         <label>Contact Name *</label>
                                                         <div class="input-group">
-                                                            <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1" rel="tooltip" name="contact_name" id="contact_name" value="" title="Enter Contact Name"> </div>
+                                                            <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1" rel="tooltip" name="contact_name" id="contact_name" value="{{ $editrequest->contactname}}" title="Enter Contact Name"> </div>
                                                     </div>
                                                     <div class="control-group">
                                                         <label>Contact Email ID *</label>
                                                         <div class="input-group">
-                                                            <input type="email" class="form-control" placeholder="" rel="tooltip" name="contact_emailid" id="contact_emailid" value="" title="Enter Contact Email_Id"> </div>
+                                                            <input type="email" class="form-control" placeholder="" rel="tooltip" name="contact_emailid" id="contact_emailid" value="{{ $editrequest->contactemail}}" title="Enter Contact Email_Id"> </div>
                                                     </div>
                                                     <div class="control-group">
                                                         <label>Contact Number *</label>
                                                         <div class="input-group">
-                                                            <input type="text" class="form-control" name="contact_number" id="contact_number" rel="tooltip" placeholder="" value="" title="Enter Contact Number"> </div>
+                                                            <input type="text" class="form-control" name="contact_number" id="contact_number" rel="tooltip" placeholder="" value="{{ $editrequest->contactnumber}}" title="Enter Contact Number"> </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 mob-con-border">
                                                     <div class="control-group">
                                                         <label>Other Message</label>
                                                         <div class="input-group">
-                                                            <textarea type="textarea" class="form-control" name="other_mess" id="other_mess" placeholder=""></textarea>
+                                                            <textarea type="textarea" class="form-control" name="other_mess" id="other_mess"  placeholder=""></textarea>
                                                         </div>
                                                     </div>
                                                     <div class="control-group">
@@ -333,7 +385,7 @@
                                                             <input type="text" class="form-control" rel="tooltip" name="when_require" placeholder="Select" id="when_require" value="" readonly="readonly" title="Select when you need blood"> </div> -->
                                                             <div class="col-md-12">
                                                                 <div class="input-group"> <span class="input-group-addon" id=""><i class="fa fa-calendar"></i></span>
-                                                                <input type="date" class="form-control"  id="when_require" value="" name="date" title="Select when you need blood">
+                                                                <input type="date" class="form-control"  id="when_require" value="required" name="date" title="Select when you need blood">
                                                               </div>
                                                     </div>
                                                 </div>

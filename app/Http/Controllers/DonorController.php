@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Registration;
 
 class DonorController extends Controller
 {
@@ -10,4 +11,5 @@ class DonorController extends Controller
     {
     	return view('Donor.pages.index');
     }
+    
 }

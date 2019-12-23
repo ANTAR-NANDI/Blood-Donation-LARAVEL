@@ -27,8 +27,12 @@ class StoreController extends Controller
         
         if($obj->save())
         {
-               
+          //   $notification = array(
+          // 'message'=>'Successfully Inserted',
+          // 'alert-type'=>'success'
+          //   );
             return redirect('User/register')->with('msg', 'Thanks for Registration!');
+            // return back()->with($notification);
         }
     }
 
@@ -49,7 +53,13 @@ class StoreController extends Controller
         {
             
             //dd('Hello');
+          if($request->session()->get('userrole')=='Requestor')
+             return redirect('Requestor/contact')->with('msg', 'Thanks for Contact US!');
+            if($request->session()->get('userrole')=='Donor')
+             return redirect('Donor/contact')->with('msg', 'Thanks for Contact US!');
+           else
             return redirect('User/contact')->with('msg', 'Thanks for Contact US!');
+            
         }
     }
     public function login(Request $request)

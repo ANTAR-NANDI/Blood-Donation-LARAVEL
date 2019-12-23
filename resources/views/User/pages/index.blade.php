@@ -11,7 +11,8 @@
                     <div class="search-blood-left">
                         <h1>Search Blood Donors</h1>
                         <div class="search-box"> <span class="errspns"> </span>
-                            <form class="form-horizontal" method="post" action="https://www.bloodbankindia.net/donors/search_result" id="search">
+                             <form class="form-horizontal" method="post" action="{{URL::to('Requestor/search_blood')}}" id="search">
+                                 {{csrf_field()}}
                                 <ul class="nav nav-pills">
                                     <li class="search-bloodgroup">
                                         <label>Blood Group *</label>
@@ -32,17 +33,17 @@
                                         <label>City *</label>
                                         <select name="city_name" id="city_name">
                                             <option value="0">Select </option>
-                                            <option value="1">Chittagong</option>
-                                            <option value="2">Barisal</option>
-                                            <option value="3">Bhola</option>
-                                            <option value="4">Jhalokati</option>
-                                            <option value="5">Barguna</option>
-                                            <option value="6">Patuakhali</option>
-                                            <option value="7">Pirojpur</option>
-                                            <option value="8">Bandarban</option>
-                                            <option value="9">Brahmanbaria</option>
-                                            <option value="10">Chandpur </option>
-                                            <option value="11">Comilla</option>
+                                            <option value="Chittagong">Chittagong</option>
+                                            <option value="2">Agra</option>
+                                            <option value="3">Ahmedabad</option>
+                                            <option value="4">Ahmednagar</option>
+                                            <option value="5">Aizwal</option>
+                                            <option value="6">Ajmer</option>
+                                            <option value="7">Akola</option>
+                                            <option value="8">Aligarh</option>
+                                            <option value="9">Allahabad</option>
+                                            <option value="10">Alwar</option>
+                                            <option value="11">Ambala</option>
                                             <option value="12">Amravati</option>
                                             <option value="13">Amreli</option>
                                             <option value="14">Amritsar</option>
@@ -69,7 +70,7 @@
                                             <option value="35">Ballabhgarh</option>
                                             <option value="36">Ballarpur</option>
                                             <option value="37">Balrampur</option>
-                                            <option value="38">Balurghat</option>
+                                            <option value="38">Balurghat West Bengal</option>
                                             <option value="39">Banda</option>
                                             <option value="40">Bangalore</option>
                                             <option value="41">Banganapalle</option>
@@ -97,7 +98,7 @@
                                             <option value="63">Bhavnagar</option>
                                             <option value="64">Bhilai Nagar</option>
                                             <option value="65">Bhimavaram</option>
-                                         
+                                           
                                         </select>
                                         <label for="city_name" class="error"></label>
                                     </li>
@@ -116,24 +117,24 @@
                                                         <table width="100%" border="0" cellspacing="0" cellpadding="10">
                                                             <tr>
                                                                 <td align="left">
-                                                                    <h2>Privacy Policy</h2>
-                                                                    <p>The BloodBankIndia.net team is committed to protecting the rights of all visitors to our website. We recognize our obligation to keep personal information secure and have created this privacy statement to share our information gathering and dissemination practices for this website. We also assure you that none of your registered information will be shared with any third parties outside the BloodBankIndia.net or the parent company uSiS Technologies. However, the information that you have agreed to broadcast during the process of registration will be available for the public view. </p>
-                                                                    <h2>Collection and Use of On-line Information </h2>
-                                                                    <p>Our web server automatically collects your IP address when you visit our site. (Your IP address is your computer's unique address that lets other computers attached to the Internet know where to send data, but does not identify you individually). We use your IP address to help diagnose problems with our server and to compile statistics on site usage. We do not make your IP address available to anyone. From time to time, we may also use cookies on your web browser to store some of the user preference, this cookie will communicate only with this website and if you wish not have them saved, you may have them deleted from your computer using your browser&rsquo;s settings. When you visit certain areas of this site including the registration form, you may be asked to provide personal information (such as name, address, e-mail address, and phone number) that we need to process your request. In the event that you decline to provide such information, we will be unable to process your request. Still, we invite you to continue to visit the site and take advantage of the wealth of information it offers. Every site user who provides us with personal information has the right to inspect, amend, or correct his/her own personal information. You may do so either online by logging in, if you are a registered user, or through simply contacting us using the details posted on the &lsquo;contact us&rsquo; page on our website. </p>
-                                                                    <h2>Other Websites, Links and Resources </h2>
-                                                                    <p>This privacy policy extends to this website (<a href="index.html">www.bloodbankindia.net</a>) only. If you link to another individual or entity's website through our website or re-directed from our website, you should read the privacy policy specific to that website to determine their practices. If you have any questions or concerns about the online policy for this site or its implementation you may contact us using the details posted on the &lsquo;contact us&rsquo; page on our website. </p>
-                                                                    <h2>Terms of use </h2>
-                                                                    <p>This is purely a non-profit website directed towards the welfare of our community. Any individual or entity that enrolls for our service does so with his/her own will and at no obligation to any one else or any other entity. We seriously condemn the use of this website for any commercial purpose, including solicitation for commercial gain based on the contact details posted by the registered users. We take the privacy of our users very seriously and therefore reserve the right to pursue a legal action against the individuals or entities violating our terms of use. </p>
-                                                                    <h2>Use of Donations</h2>
-                                                                    <p> We do accept funds in form of donation from those who volunteer themselves to do so; such funds collected will be used for running blood camps at select locations and for covering the part of the administrative expenses at running the website. </p>
-                                                                    <h2>Complaints Procedure </h2>
-                                                                    <p>Anyone who experiences a problem with the service provided by BloodBankIndia.net should raise the matter directly using our online contact us form, giving sufficient information to locate the material (such as an url) and clearly outlining the grounds for complaint. BloodBankIndia.net team will approach the individual responsible for the material in question with a view to resolving the matter to the satisfaction of the complainant. The formal complaints procedure should only be used where the complainant feels that the nature of the complaint is too serious to be dealt with informally, or where a satisfactory conclusion has not been reached after following the informal procedure. A formal complaint should be made in writing to BloodBankIndia.net team, who will acknowledge receipt and ensure that the matter is looked into at the earliest possible. An initial response to any complaint can be expected within seven days of its receipt; a full and considered response to the complaint should be completed within 30 days and any subsequent remedy implemented with the minimum of delay.</p>
-                                                                </td>
-                                                            </tr>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                            </div>
+        <h2>Privacy Policy</h2>
+        <p>The BloodBankIndia.net team is committed to protecting the rights of all visitors to our website. We recognize our obligation to keep personal information secure and have created this privacy statement to share our information gathering and dissemination practices for this website. We also assure you that none of your registered information will be shared with any third parties outside the BloodBankIndia.net or the parent company uSiS Technologies. However, the information that you have agreed to broadcast during the process of registration will be available for the public view. </p>
+        <h2>Collection and Use of On-line Information </h2>
+        <p>Our web server automatically collects your IP address when you visit our site. (Your IP address is your computer's unique address that lets other computers attached to the Internet know where to send data, but does not identify you individually). We use your IP address to help diagnose problems with our server and to compile statistics on site usage. We do not make your IP address available to anyone. From time to time, we may also use cookies on your web browser to store some of the user preference, this cookie will communicate only with this website and if you wish not have them saved, you may have them deleted from your computer using your browser&rsquo;s settings. When you visit certain areas of this site including the registration form, you may be asked to provide personal information (such as name, address, e-mail address, and phone number) that we need to process your request. In the event that you decline to provide such information, we will be unable to process your request. Still, we invite you to continue to visit the site and take advantage of the wealth of information it offers. Every site user who provides us with personal information has the right to inspect, amend, or correct his/her own personal information. You may do so either online by logging in, if you are a registered user, or through simply contacting us using the details posted on the &lsquo;contact us&rsquo; page on our website. </p>
+                <h2>Other Websites, Links and Resources </h2>
+                <p>This privacy policy extends to this website (<a href="index.html">www.bloodbankindia.net</a>) only. If you link to another individual or entity's website through our website or re-directed from our website, you should read the privacy policy specific to that website to determine their practices. If you have any questions or concerns about the online policy for this site or its implementation you may contact us using the details posted on the &lsquo;contact us&rsquo; page on our website. </p>
+                <h2>Terms of use </h2>
+                <p>This is purely a non-profit website directed towards the welfare of our community. Any individual or entity that enrolls for our service does so with his/her own will and at no obligation to any one else or any other entity. We seriously condemn the use of this website for any commercial purpose, including solicitation for commercial gain based on the contact details posted by the registered users. We take the privacy of our users very seriously and therefore reserve the right to pursue a legal action against the individuals or entities violating our terms of use. </p>
+                <h2>Use of Donations</h2>
+                <p> We do accept funds in form of donation from those who volunteer themselves to do so; such funds collected will be used for running blood camps at select locations and for covering the part of the administrative expenses at running the website. </p>
+                <h2>Complaints Procedure </h2>
+                <p>Anyone who experiences a problem with the service provided by BloodBankIndia.net should raise the matter directly using our online contact us form, giving sufficient information to locate the material (such as an url) and clearly outlining the grounds for complaint. BloodBankIndia.net team will approach the individual responsible for the material in question with a view to resolving the matter to the satisfaction of the complainant. The formal complaints procedure should only be used where the complainant feels that the nature of the complaint is too serious to be dealt with informally, or where a satisfactory conclusion has not been reached after following the informal procedure. A formal complaint should be made in writing to BloodBankIndia.net team, who will acknowledge receipt and ensure that the matter is looked into at the earliest possible. An initial response to any complaint can be expected within seven days of its receipt; a full and considered response to the complaint should be completed within 30 days and any subsequent remedy implemented with the minimum of delay.</p>
+            </td>
+        </tr>
+    </table>
+    </div>
+    </div>
+    </div>
                                             <!-- model-body -->
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -143,6 +144,8 @@
                                 </div>
                                 <!-- <div class="line"> <img src="bbi_theme/images/banner-border.png" alt="Blood Bank India Banner arrow" /> </div> -->
                                 <hr>
+                                
+                            
                                 <div class="want-blood-donor">
                                     <p>Want to become a blood donor?</p>
                                     <div class="search-reg"> <a href="{{ URL::to('User/register') }}">Register Now</a> </div>
@@ -177,7 +180,10 @@
                         <div class="blood-donors">
                             <div class="blood-donors-heart"> <img src="{{ asset('website/bbi_theme/images/ico-1.png') }}" alt="Blood Donors in Blood Bank India" /> </div>
                             <div class="blood-donors-content"> <span class="odometer meter1">0</span><span>+</span>
-                                <p>Blood Donors</p>
+                                <p>Blood Donors</p><h2>
+                                            
+                                             
+                                </h2>
                             </div>
                         </div>
                         <div class="blood-request">
@@ -312,87 +318,39 @@
                         <div class="widget-content widget-bloodrequest">
                             <h2>Blood Requests</h2>
                             <div class="widget-bloodrequest-content scrollpar" id="style-2">
+                                @foreach($request as $r)
                                 <div class='blood-req-widget'>
+
+                                 
                                     <div class='b-group2'>
-                                        <div class='sub-b-group-1'> <i class='fa fa-user'></i>&nbsp<b>Sananda Chakraborty </b>&nbsp <i class='fa fa-map-marker'></i>&nbspDurgapur </div>
-                                        <div class='sub-b-group-2'> <i class='fa fa-question-circle'></i>&nbsp27-11-2019&nbsp&nbsp&nbsp<i class='fa fa-clock-o'></i>&nbsp3 days ago </div>
+                                        <div class='sub-b-group-1'> <i class='fa fa-user'></i>&nbsp<b>{{$r->patientname}}</b>&nbsp <i class='fa fa-map-marker'></i>&nbsp{{$r->city}}</div>
+                                        <div class='sub-b-group-2'> <i class='fa fa-question-circle'></i>&nbsp{{$r->required}}&nbsp&nbsp&nbsp<i class='fa fa-clock-o'></i>&nbsp{{$r->required}}</div>
                                         <div class='sub-b-group-3'> </div>
                                     </div>
                                     <div class='b-group3'>
-                                        <div class='b-group'>A- </div>
+                                        <div class='b-group'>{{$r->blood}} </div>
                                         <br>
                                         <div class='sub-b-group-4'>
                                             <a data-toggle='tooltip' data-placement='top' title='View Details' href=tools/req/2059.html> <i class='fa fa-search' aria-hidden='true'></i> </a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class='blood-req-widget'>
-                                    <div class='b-group2'>
-                                        <div class='sub-b-group-1'> <i class='fa fa-user'></i>&nbsp<b>Sananda Chakraborty </b>&nbsp <i class='fa fa-map-marker'></i>&nbspDurgapur </div>
-                                        <div class='sub-b-group-2'> <i class='fa fa-question-circle'></i>&nbsp27-11-2019&nbsp&nbsp&nbsp<i class='fa fa-clock-o'></i>&nbsp3 days ago </div>
-                                        <div class='sub-b-group-3'> </div>
-                                    </div>
-                                    <div class='b-group3'>
-                                        <div class='b-group'>A- </div>
-                                        <br>
-                                        <div class='sub-b-group-4'>
-                                            <a data-toggle='tooltip' data-placement='top' title='View Details' href=tools/req/2058.html> <i class='fa fa-search' aria-hidden='true'></i> </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class='blood-req-widget'>
-                                    <div class='b-group2'>
-                                        <div class='sub-b-group-1'> <i class='fa fa-user'></i>&nbsp<b>PG Rajendran </b>&nbsp <i class='fa fa-map-marker'></i>&nbspHyderabad, Andhra Pradesh </div>
-                                        <div class='sub-b-group-2'> <i class='fa fa-question-circle'></i>&nbsp01-11-2019&nbsp&nbsp&nbsp<i class='fa fa-clock-o'></i>&nbsp8 days ago </div>
-                                        <div class='sub-b-group-3'> </div>
-                                    </div>
-                                    <div class='b-group3'>
-                                        <div class='b-group'>AB+ </div>
-                                        <br>
-                                        <div class='sub-b-group-4'>
-                                            <a data-toggle='tooltip' data-placement='top' title='View Details' href=tools/req/2057.html> <i class='fa fa-search' aria-hidden='true'></i> </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class='blood-req-widget'>
-                                    <div class='b-group2'>
-                                        <div class='sub-b-group-1'> <i class='fa fa-user'></i>&nbsp<b>Bipin Bhai Joshi </b>&nbsp <i class='fa fa-map-marker'></i>&nbspAhmedabad </div>
-                                        <div class='sub-b-group-2'> <i class='fa fa-question-circle'></i>&nbsp30-10-2019&nbsp&nbsp&nbsp<i class='fa fa-clock-o'></i>&nbsp9 days ago </div>
-                                        <div class='sub-b-group-3'> </div>
-                                    </div>
-                                    <div class='b-group3'>
-                                        <div class='b-group'>A+ </div>
-                                        <br>
-                                        <div class='sub-b-group-4'>
-                                            <a data-toggle='tooltip' data-placement='top' title='View Details' href=tools/req/2056.html> <i class='fa fa-search' aria-hidden='true'></i> </a>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
+
+
                         <div class="widget-content widget-recentdonors">
                             <h2>Recent Donors</h2>
                             <div class="widget-recentdonors-content">
+                                <!-- <h2>{{$count}}</h2> -->
+                                @foreach($donor as $d)
                                 <div class='blood-req-widget'>
-                                    <div class='rec-b-group'>B+ </div>
-                                    <div class='rec-b-name'><b style='font-family:HelveticaNeue-Bold;'>Shubham Tyagi </b> (Ghaziabad)
-                                        <br/> 3 hours ago </div>
+                                    <div class='rec-b-group'>{{$d->blood}} </div>
+                                    <div class='rec-b-name'><b style='font-family:HelveticaNeue-Bold;'>{{$d->fullname}} </b> ({{$d->city}})
+                                        <br/>{{$d->updated_at}}</div>
                                 </div>
-                                <div class='blood-req-widget'>
-                                    <div class='rec-b-group'>B+ </div>
-                                    <div class='rec-b-name'><b style='font-family:HelveticaNeue-Bold;'>Dhruv Ajay Sureka </b> (Mumbai)
-                                        <br/> 5 hours ago </div>
-                                </div>
-                                <div class='blood-req-widget'>
-                                    <div class='rec-b-group'>A+ </div>
-                                    <div class='rec-b-name'><b style='font-family:HelveticaNeue-Bold;'>Shruthi PK </b> (Bangalore)
-                                        <br/> 12 hours ago </div>
-                                </div>
-                                <div class='blood-req-widget'>
-                                    <div class='rec-b-group'>O- </div>
-                                    <div class='rec-b-name'><b style='font-family:HelveticaNeue-Bold;'>Anand Yadav </b> (Mumbai)
-                                        <br/> 1 day ago </div>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
@@ -402,6 +360,11 @@
         </div>
         <!-- container -->
     </div>
+                                     @if(session('msg'))
+                                        <script>
+                                            alert('You have To Login for requesting blood!!')
+                                        </script>
+                                        @endif
     <!-- main-search-blood-donors -->
     <script type="text/javascript">
         function viewTerms() {
@@ -463,9 +426,9 @@
         $(".control-group .input-group select").addClass("form-control");
     </script>
     <script>
-        var donor = "7400";
-        var request = "2000";
-        var active = "3500";
+        var donor = "{{$count}}";
+        var request = "{{$count1}}";
+        var active = "{{$count2}}";
         console.log(donor);
         setTimeout(function() {
             $('.meter1').html(donor);

@@ -189,6 +189,11 @@
             </div>
         </div>
     </div>
+                               @if(session('msg'))
+                                        <script>
+                                            alert('Thanks for Contact us!!!')
+                                        </script>
+                                        @endif
     <!-- contactus-main-content -->
 </body>
 <!-- Mirrored from www.bloodbankindia.net/contactus by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 08 Nov 2019 09:28:57 GMT -->

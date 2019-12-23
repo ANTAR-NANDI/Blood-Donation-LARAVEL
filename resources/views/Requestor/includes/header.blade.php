@@ -26,7 +26,7 @@
                         <ul class="main-menu sf-menu">
                             <li class=""><a href="{{ URL::to('Requestor/home') }}" class="hvr-bounce-to-bottom-2 m1-2" style="font-size: 13px">Search Blood</a></li>
                              <li class=""><a href="{{ URL::to('Requestor/request') }}" class="hvr-bounce-to-bottom-2 m1-2" style="font-size: 13px">Request Blood</a> </li>
-                             <li class=""><a href="{{ URL::to('allrequest') }}" class="hvr-bounce-to-bottom-2 m1-2" style="font-size: 13px">Your Request</a> </li>
+                             <li class=""><a href="{{ URL::to('Requestor/yourrequest') }}" class="hvr-bounce-to-bottom-2 m1-2" style="font-size: 13px">Your Request</a> </li>
                             
                             
                             
