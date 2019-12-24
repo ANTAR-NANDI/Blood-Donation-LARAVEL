@@ -175,8 +175,8 @@
                 <div class="left-side">
                     <div class="row">
                         <div class="widget-item"> <span class="errspns"> </span>
-                            <h2 class="welcome-text">Request Blood</h2>
-                            <form class="form-horizontal" action="{{URL::to('Donor/request_blood_store')}}" id="request_blood" method="post" id="request_blood">
+                            <h2 class="welcome-text">Add a Donation to Patient</h2>
+                            <form class="form-horizontal" action="{{URL::to('Donor/donation_store')}}" id="request_blood" method="post" id="request_blood">
                                 {{csrf_field()}}
                                 <div class="mob-con-border">
                                     <div class="con-border">
@@ -294,41 +294,8 @@
                                                         <div class="input-group">
                                                             <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1" name="amount" rel="tooltip" id="doctor_name" value="" title="Plese enter Doctor name"> </div>
                                                     </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="con-border">
-                                        <div class="col-md-12">
-                                            <h3> Contact Details</h3>
-                                            <div class="row">
-                                                <div class="col-md-6 mob-con-border">
                                                     <div class="control-group">
-                                                        <label>Contact Name *</label>
-                                                        <div class="input-group">
-                                                            <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1" rel="tooltip" name="contact_name" id="contact_name" value="" title="Enter Contact Name"> </div>
-                                                    </div>
-                                                    <div class="control-group">
-                                                        <label>Contact Email ID *</label>
-                                                        <div class="input-group">
-                                                            <input type="email" class="form-control" placeholder="" rel="tooltip" name="contact_emailid" id="contact_emailid" value="" title="Enter Contact Email_Id"> </div>
-                                                    </div>
-                                                    <div class="control-group">
-                                                        <label>Contact Number *</label>
-                                                        <div class="input-group">
-                                                            <input type="text" class="form-control" name="contact_number" id="contact_number" rel="tooltip" placeholder="" value="" title="Enter Contact Number"> </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6 mob-con-border">
-                                                    <div class="control-group">
-                                                        <label>Other Message</label>
-                                                        <div class="input-group">
-                                                            <textarea type="textarea" class="form-control" name="other_mess" id="other_mess" placeholder=""></textarea>
-                                                        </div>
-                                                    </div>
-                                                    <div class="control-group">
-                                                        <label>When Required *</label>
+                                                        <label>Donation Date *</label>
                                                         <!-- <div class="input-group"> <span class="input-group-addon" id=""><i class="fa fa-calendar"></i></span>
                                                             <input type="text" class="form-control" rel="tooltip" name="when_require" placeholder="Select" id="when_require" value="" readonly="readonly" title="Select when you need blood"> </div> -->
                                                             <div class="col-md-12">
@@ -337,10 +304,12 @@
                                                               </div>
                                                     </div>
                                                 </div>
+
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                  
                                 <div class="clearfix"></div>
                                 <div class="mob-con-border control-group">
                                     <div class="controls">
@@ -351,7 +320,7 @@
                                 <div class="mob-con-border control-group">
                                     <div class="controls">
                                         <label class="checkbox">
-                                            <input type="checkbox" value="accept" name="accept_terms" /> I agree to have my contact details broadcasted to the registered donors of BloodBankIndia.net </label>
+                                            <input type="checkbox" value="accept" name="accept_terms" /> I am donating blood as my pleasure. </label>
                                     </div>
                                 </div>
 
@@ -359,7 +328,7 @@
 
                                 <div class="mob-con-border control-group">
                                     <div class="controls btn-bbi-group">
-                                        <button type="submit" class="btn btn-danger btn-bbi">Submit Request</button>
+                                        <button type="submit" class="btn btn-danger btn-bbi">Add Donation</button>
                                         <br/> </div>
                                         @if(session('msg'))
                                         <div class="alert alert-success">

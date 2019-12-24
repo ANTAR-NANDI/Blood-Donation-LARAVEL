@@ -180,7 +180,7 @@
                     <div class="row">
                         <div class="widget-item"> <span class="errspns"> </span>
                             <h2 class="welcome-text">Request Blood</h2>
-                            <form class="form-horizontal" action="{{ URL::to('updaterequest/'.$editrequest->id) }}" id="request_blood" method="post" id="request_blood">
+                            <form class="form-horizontal" action="{{ URL::to('Requestor/updaterequest/'.$editrequest->id) }}" id="request_blood" method="post" id="request_blood">
                                 {{csrf_field()}}
                                 <div class="mob-con-border">
                                     <div class="con-border">
@@ -288,7 +288,7 @@
                                                     <div class="control-group">
                                                         <label>Hospital Name & Address *</label>
                                                         <div class="input-group">
-                                                           <textarea type="textarea" class="form-control" name="other_mess" id="other_mess"  placeholder="">{{ $editrequest->hospitaladdress}}</textarea>
+                                                           <textarea type="textarea" class="form-control" name="hospitaladdress" id="hospitaladdress"  placeholder="">{{ $editrequest->hospitaladdress}}</textarea>
                                                         </div>
                                                     </div>
                                                    
@@ -328,7 +328,7 @@
                                                     <div class="control-group">
                                                         <label>Other Message</label>
                                                         <div class="input-group">
-                                                            <textarea type="textarea" class="form-control" name="other_mess" id="other_mess"  placeholder="">{{ $editrequest->hospitaladdress}}</textarea>
+                                                            <textarea type="textarea" class="form-control" name="other_mess" id="other_mess"  placeholder="">{{ $editrequest->message}}</textarea>
                                                            
                                                         </div>
                                                     </div>

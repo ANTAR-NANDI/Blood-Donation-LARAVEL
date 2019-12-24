@@ -15,7 +15,7 @@
                        
                      <!-- <img src="{{ asset('website/bbi_theme/images/logo-about.png')}}" alt="Universe" /> </div> -->
                      <h1 style="color: green">Project For University </h1>
-                    <p>uSiS Technologies is an emerging IT solution provider that facilitates the growth of your business, and expedites your communication and transaction over web.</p> <span><a href="http://www.usistech.com/" target="_blank">www.usistech.com</a>+91 422 2461790</span> </div>
+                    <p>uSiS Technologies is an emerging IT solution provider that facilitates the growth of your business, and expedites your communication and transaction over web.</p> <span><a href="http://www.bdbloodbank.com/" target="_blank">www.bdbloodbank.com</a>01824506162</span> </div>
                 <!-- about-content-right -->
             </div>
             <!-- row -->

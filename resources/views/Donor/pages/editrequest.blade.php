@@ -1,4 +1,4 @@
-@extends('Donor.layouts.defaults')
+@extends('Requestor.layouts.defaults')
 @section('abc')
 
 
@@ -29,7 +29,7 @@
                                         maxlength: 15
                                     },
                                     emailid: {
-                                        required: true, //email:true    }   },  messages:{  password:{  required:"Please enter your password",  minlength:"Password should atleast 8 letter",   maxlength:"Password should not exceed 20 letter"    },  emailid:{   required:"Please enter your email/mobile number"    }   }   }); }); $( ".control-group .input-group select" ).addClass( "form-control" );
+                                        required: true, //email:true  } },  messages:{  password:{  required:"Please enter your password",  minlength:"Password should atleast 8 letter", maxlength:"Password should not exceed 20 letter"  },  emailid:{ required:"Please enter your email/mobile number"  } } }); }); $( ".control-group .input-group select" ).addClass( "form-control" );
     </script>
     <script>
         $.validator.addMethod('numericOnly', function(value) {
@@ -98,16 +98,17 @@
                         </script>
                     </div>
                     <!-- ads -->
-    <div class="tab-widget" >
-        <ul class="nav nav-tabs">
-            <li class="active"><a href="#BLOOD-REQUESTS">BLOOD <span>REQUESTS</span></a></li>
-            <li><a href="#RECENT-DONORS">RECENT <span>DONORS</span></a></li>
-            <li><a href="#QUICK">QUICK <span>TIP</span></a></li>
-        </ul>
-        <div class="tab-content">
-            <div id="BLOOD-REQUESTS" class="tab-pane fade in active">
-                <div class="widget-main">
-                    <div class="widget-inner">
+                    <div class="tab-widget" >
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#BLOOD-REQUESTS">BLOOD <span>REQUESTS</span></a></li>
+                            <li><a href="#RECENT-DONORS">RECENT <span>DONORS</span></a></li>
+                            <li><a href="#QUICK">QUICK <span>TIP</span></a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="BLOOD-REQUESTS" class="tab-pane fade in active">
+                                <div class="widget-main">
+                                    <div class="widget-inner">
+                                         <div class="widget-inner">
       @foreach($request as $r)
                 <div class='blood-req-widget scrollpar'>
                     <div class='b-group2'>
@@ -126,57 +127,60 @@
     
      @endforeach
                     </div>
-                    <!-- /.widget-inner -->
-                </div>
-                <!-- /.widget-main -->
-            </div>
-            <div id="RECENT-DONORS" class="tab-pane fade">
-                <div class="widget-main" >
-                    <div class="widget-inner">
-                        @foreach($donor as $d)
-                         <div class='blood-req-widget'>
-                            <div class='rec-b-group'>{{$d->blood}} </div>
-                            <div class='rec-b-name'><b style='font-family:HelveticaNeue-Bold;'>{{$d->fullname}} </b> ({{$d->city}})
-                                <br/>{{$d->updated_at}}</div>
+                                    </div>
+                                    <!-- /.widget-inner -->
+                                </div>
+                                <!-- /.widget-main -->
+                            </div>
+                            <div id="RECENT-DONORS" class="tab-pane fade">
+                                <div class="widget-main" >
+                                    <div class="widget-inner">
+                                        
+                                       @foreach($donor as $d)
+                                         <div class='blood-req-widget'>
+                                            <div class='rec-b-group'>{{$d->blood}} </div>
+                                            <div class='rec-b-name'><b style='font-family:HelveticaNeue-Bold;'>{{$d->fullname}} </b> ({{$d->city}})
+                                                <br/>{{$d->updated_at}}</div>
+                                        </div>
+                                         @endforeach
+                                       
+                                    </div>
+                                    <!-- /.widget-inner -->
+                                </div>
+                                <!-- /.widget-main -->
+                            </div>
+                            <div id="QUICK" class="tab-pane fade">
+                                <div class="widget-main">
+                                    <div class="widget-main-title">
+                                        <h4 class="widget-title">What you should eat before donating blood </h4> </div>
+                                    <!-- /.widget-main-title -->
+                                    <div class="widget-inner">
+                                        <p>A healthy diet helps ensure a successful blood donation, and also makes you feel better!
+                                            <br/> Check out the following recommended foods to eat prior to your donation.</p>
+                                        <table border="0" cellpadding="5" cellspacing="0" class="ULtable">
+                                            <tr>
+                                                <td><img src="../bbi_theme/images/arrow.jpg" width="8" height="5" /></td>
+                                                <td>Low fat foods</td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="../bbi_theme/images/arrow.jpg" width="8" height="5" /></td>
+                                                <td>Iron rich foods</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- /.widget-main -->
+                            </div>
                         </div>
-                         @endforeach
+                        <!-- tab-content -->
                     </div>
-                    <!-- /.widget-inner -->
+                    <!-- tab-widget -->
                 </div>
-                <!-- /.widget-main -->
-            </div>
-            <div id="QUICK" class="tab-pane fade">
-                <div class="widget-main">
-                    <div class="widget-main-title">
-                        <h4 class="widget-title">What you should eat before donating blood </h4> </div>
-                    <!-- /.widget-main-title -->
-                    <div class="widget-inner">
-                        <p>A healthy diet helps ensure a successful blood donation, and also makes you feel better!
-                            <br/> Check out the following recommended foods to eat prior to your donation.</p>
-                        <table border="0" cellpadding="5" cellspacing="0" class="ULtable">
-                            <tr>
-                                <td><img src="../bbi_theme/images/arrow.jpg" width="8" height="5" /></td>
-                                <td>Low fat foods</td>
-                            </tr>
-                            <tr>
-                                <td><img src="../bbi_theme/images/arrow.jpg" width="8" height="5" /></td>
-                                <td>Iron rich foods</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-                <!-- /.widget-main -->
-            </div>
-        </div>
-        <!-- tab-content -->
-    </div>
-    <!-- tab-widget -->
-</div>
                 <div class="left-side">
                     <div class="row">
                         <div class="widget-item"> <span class="errspns"> </span>
                             <h2 class="welcome-text">Request Blood</h2>
-                            <form class="form-horizontal" action="{{URL::to('Donor/request_blood_store')}}" id="request_blood" method="post" id="request_blood">
+                            <form class="form-horizontal" action="{{ URL::to('Donor/updaterequest/'.$editrequest->id) }}" id="request_blood" method="post" id="request_blood">
                                 {{csrf_field()}}
                                 <div class="mob-con-border">
                                     <div class="con-border">
@@ -187,13 +191,13 @@
                                                     <div class="control-group">
                                                         <label>Patient Name *</label>
                                                         <div class="input-group">
-                                                            <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1" rel="tooltip" name="patient_name" id="patient_name" value="" title="Please enter Patient Name    Maximum 20 characters."> </div>
+                                                            <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1" rel="tooltip" name="patient_name" id="patient_name" value="{{ $editrequest->patientname }}" title="Please enter Patient Name Maximum 20 characters."> </div>
                                                     </div>
                                                     <div class="control-group">
                                                         <label>Blood Group *</label>
                                                         <div class="input-group">
                                                             <select name="blood" id="blood">
-                                                                <option value="0">Select </option>
+                                                                <option value="{{ $editrequest->blood }}">{{ $editrequest->blood }}</option>
                                                                 <option value="A+">A+</option>
                                                                 <option value="B+">B+</option>
                                                                 <option value="O+">O+</option>
@@ -210,7 +214,7 @@
                                                         <label>City *</label>
                                                         <div class="input-group">
                                                             <select name="city_name" id="city_name">
-                                                                <option value="0">Select </option>
+                                                                <option value="0">{{ $editrequest->city}} </option>
                                                                 <option value="1">Agartala</option>
                                                                 <option value="2">Agra</option>
                                                                 <option value="3">Ahmedabad</option>
@@ -284,7 +288,7 @@
                                                     <div class="control-group">
                                                         <label>Hospital Name & Address *</label>
                                                         <div class="input-group">
-                                                            <textarea type="textarea" class="form-control" rel="tooltip" name="hospital_detail" id="hospital_detail" placeholder="" value="" title="Type your street address here.  Eg: #23, ABC Street"></textarea>
+                                                           <textarea type="textarea"  class="form-control" name="hospitaladdress" id="other_mess"  placeholder="">{{ $editrequest->hospitaladdress}}</textarea>
                                                         </div>
                                                     </div>
                                                    
@@ -292,7 +296,7 @@
                                                 <div class="control-group">
                                                         <label>Amount of Blood*</label>
                                                         <div class="input-group">
-                                                            <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1" name="amount" rel="tooltip" id="doctor_name" value="" title="Plese enter Doctor name"> </div>
+                                                            <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1" name="amount" rel="tooltip" id="doctor_name" value="{{ $editrequest->amount}}" title="Plese enter Doctor name"> </div>
                                                     </div>
 
                                                 </div>
@@ -307,24 +311,26 @@
                                                     <div class="control-group">
                                                         <label>Contact Name *</label>
                                                         <div class="input-group">
-                                                            <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1" rel="tooltip" name="contact_name" id="contact_name" value="" title="Enter Contact Name"> </div>
+                                                            <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1" rel="tooltip" name="contact_name" id="contact_name" value="{{ $editrequest->contactname}}" title="Enter Contact Name"> </div>
                                                     </div>
                                                     <div class="control-group">
                                                         <label>Contact Email ID *</label>
                                                         <div class="input-group">
-                                                            <input type="email" class="form-control" placeholder="" rel="tooltip" name="contact_emailid" id="contact_emailid" value="" title="Enter Contact Email_Id"> </div>
+                                                            <input type="email" class="form-control" placeholder="" rel="tooltip" name="contact_emailid" id="contact_emailid" value="{{ $editrequest->contactemail}}" title="Enter Contact Email_Id"> </div>
                                                     </div>
                                                     <div class="control-group">
                                                         <label>Contact Number *</label>
                                                         <div class="input-group">
-                                                            <input type="text" class="form-control" name="contact_number" id="contact_number" rel="tooltip" placeholder="" value="" title="Enter Contact Number"> </div>
+                                                            <input type="text" class="form-control" name="contact_number" id="contact_number" rel="tooltip" placeholder="" value="{{ $editrequest->contactnumber}}" title="Enter Contact Number"> </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 mob-con-border">
                                                     <div class="control-group">
                                                         <label>Other Message</label>
                                                         <div class="input-group">
-                                                            <textarea type="textarea" class="form-control" name="other_mess" id="other_mess" placeholder=""></textarea>
+                                                            <textarea type="textarea" class="form-control" name="other_mess" id="other_mess"  placeholder="">{{ $editrequest->message}}</textarea>
+                                                            <!--  <input type="text" class="form-control" name="contact_number" id="contact_number" rel="tooltip" placeholder="" value="{{ $editrequest->message}}" title="Enter Message">  -->
+                                                           
                                                         </div>
                                                     </div>
                                                     <div class="control-group">
@@ -333,7 +339,7 @@
                                                             <input type="text" class="form-control" rel="tooltip" name="when_require" placeholder="Select" id="when_require" value="" readonly="readonly" title="Select when you need blood"> </div> -->
                                                             <div class="col-md-12">
                                                                 <div class="input-group"> <span class="input-group-addon" id=""><i class="fa fa-calendar"></i></span>
-                                                                <input type="date" class="form-control"  id="when_require" value="" name="date" title="Select when you need blood">
+                                                                <input type="date" class="form-control"  id="when_require" value="{{ $editrequest->required}}" name="date" title="Select when you need blood">
                                                               </div>
                                                     </div>
                                                 </div>
@@ -351,7 +357,7 @@
                                 <div class="mob-con-border control-group">
                                     <div class="controls">
                                         <label class="checkbox">
-                                            <input type="checkbox" value="accept" name="accept_terms" /> I agree to have my contact details broadcasted to the registered donors of BloodBankIndia.net </label>
+                                            <input type="checkbox" value="accept" name="accept_terms" required /> I agree to have my contact details broadcasted to the registered donors of BloodBankIndia.net </label>
                                     </div>
                                 </div>
 

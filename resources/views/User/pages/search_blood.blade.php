@@ -4,19 +4,28 @@
  
             <div class="container">
 
- <div class="row">
-    <div class="search-blood-left">
+ 
+    
                          <h1>Search Results</h1>
-        @foreach($donors ?? '' as $d)
-            <div class="col-md-5" style="background-color: #e6e6e6">
-                <td>{{ $d->fullname }}</td><br>
-                <td>{{ $d->blood }}</td><br>
-                <td>{{ $d->mobile }}</td><br>
-                <td>{{ $d->address }}</td><br>
-                <td>{{ $d->city }}</td>
-            </div>
-            <div class="col-md-1">
-        </div>
+                         <div class="row">
+        @foreach($donors as $d)
+             <div class="col-md-4 mr-2">
+                      <div class="card">
+                        <div class="card-body" style="margin-right: 30px">
+                          <pre class="text-uppercase" style="font-weight: bold;">
+Name: {{$d->fullname}}
+Blood-Group: {{$d->blood}}
+Mobile-No.:{{$d->mobile}}
+Address: {{ $d->address }}
+Location: {{ $d->city }}
+                          </pre>
+                        </div>
+                      </div>
+                    </div>
+            
+
+
+
         @endforeach
     </div>
 </div>

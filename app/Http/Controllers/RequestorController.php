@@ -145,7 +145,7 @@ class RequestorController extends Controller
       // $user_id=Session::get('userid');
         
         $obj->patientname=$request->patient_name;
-        $obj->hospitaladdress=$request->hospital_detail;
+        $obj->hospitaladdress=$request->hospitaladdress;
         $obj->blood=$request->blood;
         $obj->city=$request->city_name;
         $obj->amount=$request->amount;

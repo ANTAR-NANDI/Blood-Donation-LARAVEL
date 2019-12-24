@@ -53,9 +53,9 @@ Route::post('Requestor/request_blood_store', 'RequestorController@request_blood_
 Route::get('Requestor/search-blood', 'RequestorController@search');
 Route::post('Requestor/search_blood', 'RequestorController@search_blood');
 Route::get('Requestor/yourrequest', 'RequestorController@your_request');
-Route::get('editrequest/{id}','RequestorController@update');
-Route::post('updaterequest/{id}','RequestorController@update_data');
-Route::get('delete/{id}','RequestorController@delete');
+Route::get('Requestor/editrequest/{id}','RequestorController@update');
+Route::post('Requestor/updaterequest/{id}','RequestorController@update_data');
+Route::get('Requestor/delete/{id}','RequestorController@delete');
 });
 
 
@@ -80,12 +80,20 @@ Route::get('delete/{id}','RequestorController@delete');
 Route::group(['middleware'=>'IsDonor'], function(){
 Route::get('Donor/home','DonorController@donor_index');
 Route::get('Donor/about','DonorController@donor_about');
+Route::get('Donor/adddonation','DonorController@adddonation');
+Route::post('Donor/donation_store','DonorController@donation_store');
 Route::get('Donor/request','DonorController@donor_request');
-Route::get('Donor/viewdonation','DonorController@donor_viewrequest');
+Route::get('Donor/donation','DonorController@donor_donation');
 Route::get('Donor/contact','DonorController@donor_contact');
 Route::get('Donor/tips','DonorController@donor_tips');
 Route::get('Donor/search-blood', 'DonorController@search');
 Route::post('Donor/search_blood', 'DonorController@search_blood');
+Route::post('Donor/request_blood_store', 'DonorController@request_blood_store');
+Route::get('Donor/yourrequest', 'DonorController@your_request');
+Route::get('Donor/editrequest/{id}','DonorController@update');
+Route::post('Donor/updaterequest/{id}','DonorController@update_data');
+Route::get('Donor/delete/{id}','DonorController@delete');
+
 
 
 });

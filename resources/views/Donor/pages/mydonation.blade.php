@@ -1,34 +1,44 @@
-@extends('Requestor.layouts.defaults')
+@extends('Donor.layouts.defaults')
 @section('abc')
 
- 
-           <div class="container">
+<div class="container">
 
  
     
                          <h1>Search Results</h1>
                          <div class="row">
-        @foreach($donors as $d)
+        @foreach($donations as $d)
              <div class="col-md-4 mr-2">
                       <div class="card">
                         <div class="card-body" style="margin-right: 30px">
                           <pre class="text-uppercase" style="font-weight: bold;">
-Name: {{$d->fullname}}
-Blood-Group: {{$d->blood}}
-Mobile-No.:{{$d->mobile}}
-Address: {{ $d->address }}
-Location: {{ $d->city }}
+Patient-Name: {{ $d->patientname }}
+Hospital-Address: {{ $d->hospitaladdress }}
+City:{{ $d->city }}
+Date: {{ $d->date }}
+
+
+
+
+
                           </pre>
+
                         </div>
                       </div>
                     </div>
-            
-
 
 
         @endforeach
     </div>
 </div>
+        
+
+
+           
+               
+                
+            
+    
     
                             <div class="search-blood-banner">
                                 <script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>

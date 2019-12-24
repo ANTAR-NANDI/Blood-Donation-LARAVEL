@@ -26,17 +26,17 @@
                         <ul class="main-menu sf-menu">
                             <!-- <li class=""><a href="{{ URL::to('Donor/home') }}" class="hvr-bounce-to-bottom-2 m1-2" style="font-size: 12px">Search Blood</a></li> -->
                              <li class=""><a href="{{ URL::to('Donor/request') }}" class="hvr-bounce-to-bottom-2 m1-2" style="font-size: 13px">Request Blood</a> </li>
-                             <li class=""><a href="{{ URL::to('Requestor/yourrequest') }}" class="hvr-bounce-to-bottom-2 m1-2" style="font-size: 13px">Your Request</a> </li>
+                             <li class=""><a href="{{ URL::to('Donor/yourrequest') }}" class="hvr-bounce-to-bottom-2 m1-2" style="font-size: 13px">Your Request</a> </li>
                             
                             
                             
                            
-                            <li class=""><a href="{{ URL::to('Requestor/tips') }}" class="hvr-bounce-to-bottom-2 m1-2" style="font-size: 13px">Add Donation</a></li>
+                            <li class=""><a href="{{ URL::to('Donor/adddonation') }}" class="hvr-bounce-to-bottom-2 m1-2" style="font-size: 13px">Add Donation</a></li>
 
-                            <li class=""><a href="{{ URL::to('Requestor/tips') }}" class="hvr-bounce-to-bottom-2 m1-2" style="font-size: 13px">View Donation</a></li>
+                            <li class=""><a href="{{ URL::to('Donor/donation') }}" class="hvr-bounce-to-bottom-2 m1-2" style="font-size: 13px">View Donation</a></li>
 
-                            <li class=""><a href="{{ URL::to('Requestor/contact') }}" class="hvr-bounce-to-bottom-2 m1-2" style="font-size: 13px">Contact</a></li>
-                     <li class=""><a href="{{ URL::to('Requestor/about') }}" class="hvr-bounce-to-bottom-2 m1-2" style="font-size: 13px">About</a> </li>
+                            <li class=""><a href="{{ URL::to('Donor/contact') }}" class="hvr-bounce-to-bottom-2 m1-2" style="font-size: 13px">Contact</a></li>
+                     <li class=""><a href="{{ URL::to('Donor/about') }}" class="hvr-bounce-to-bottom-2 m1-2" style="font-size: 13px">About</a> </li>
                               <li class=""><a href="{{ URL::to('logout') }}" class="hvr-bounce-to-bottom-2 m1-2" style="font-size: 13px">Logout</a></li>
 
 

@@ -1,55 +1,44 @@
 @extends('Requestor.layouts.defaults')
 @section('abc')
 
+<div class="container">
+
  
-            <div class="container">
-                <h1>Search Results</h1>
-                
-         
-           
-                <div class="row">
- @foreach($requests as $r)
- 
-    <div class="col-md-4">
+    
+                         <h1>Search Results</h1>
+                         <div class="row">
+        @foreach($requests as $r)
+             <div class="col-md-4 mr-2">
                       <div class="card">
-                        <div class="card-body" style="background-color: #e6e6e6">
-                <td>{{ $r->patientname }}</td><br>
-                <td>{{ $r->hospitaladdress }}</td><br>
-                <td>{{ $r->contactnumber }}</td><br>
-                <td>{{ $r->contactname }}</td><br>
-                <td>{{ $r->blood }}</td><br>
-                <td>{{ $r->amount }}</td><br>
-                <td ><a href="{{ URL::to('editrequest/'.$r->id)}}" class="btn btn-info btn-sm">Edit </a></td>
-               <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#{{ $r->id }}">Delete</button>
-                <div id="{{ $r->id }}" class="modal fade" role="dialog">
-                      <div class="modal-dialog">
+                        <div class="card-body" style="margin-right: 30px">
+                          <pre class="text-uppercase" style="font-weight: bold;">
+Name: {{ $r->patientname }}
+Address: {{ $r->hospitaladdress }}
+Mobile-No.:{{ $r->contactnumber }}
+Contact-Name: {{ $r->contactname }}
+Amount: {{ $r->amount }}
+Blood-Group: {{ $r->blood }}
+<td ><a href="{{ URL::to('Requestor/editrequest/'.$r->id)}}" class="btn btn-info btn-sm">Edit </a></td><br>
+<td style="margin-left: 10px"><a href="{{ URL::to('Requestor/delete/'.$r->id)}}" class="btn btn-info btn-sm" >Delete</a></td>
 
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">Delete Confirmation</h4>
-                          </div>
-                          <div class="modal-body">
-                            <p>Do You Want to Delete??</p>
-                          </div>
-                          <div class="modal-footer">
-                             <a href="{{ URL::to('delete/'.$r->id)}}" class="btn btn-danger">Delete</a>
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                          </div>
+
+                          </pre>
+
                         </div>
-
                       </div>
                     </div>
-            </div>
-           
-        </div>
-        </div>
-   
-    <br>
+
+
         @endforeach
-        </div>
-         </div>
+    </div>
+</div>
+        
+
+
+           
+               
+                
+            
     
     
                             <div class="search-blood-banner">
