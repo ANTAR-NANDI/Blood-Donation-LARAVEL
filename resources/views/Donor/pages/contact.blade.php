@@ -1,4 +1,4 @@
-@extends('User.layouts.defaults')
+@extends('Dono.layouts.defaults')
 @section('abc')
 
  <div class="contactus-main-content">

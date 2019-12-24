@@ -30,7 +30,9 @@ Route::post('User/search_blood', 'UserController@search_blood');
 //Admin Panel Route
 Route::group(['middleware'=>'IsAdmin'], function(){
 Route::get('Admin/home','AdminController@admin_index');
-Route::get('Admin/alldonor','DonorController@alldonor');
+Route::get('Admin/alldonorlist','AdminController@alldonor');
+Route::get('Admin/message','AdminController@message');
+
 });
 
 
@@ -59,6 +61,21 @@ Route::get('delete/{id}','RequestorController@delete');
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //Donor Route
 Route::group(['middleware'=>'IsDonor'], function(){
 Route::get('Donor/home','DonorController@donor_index');
@@ -67,6 +84,8 @@ Route::get('Donor/request','DonorController@donor_request');
 Route::get('Donor/viewdonation','DonorController@donor_viewrequest');
 Route::get('Donor/contact','DonorController@donor_contact');
 Route::get('Donor/tips','DonorController@donor_tips');
+Route::get('Donor/search-blood', 'DonorController@search');
+Route::post('Donor/search_blood', 'DonorController@search_blood');
 
 
 });

@@ -1,4 +1,4 @@
-@extends('User.layouts.defaults')
+@extends('Donor.layouts.defaults')
 @section('abc')
 
 <div class="blooddonation-main-content">

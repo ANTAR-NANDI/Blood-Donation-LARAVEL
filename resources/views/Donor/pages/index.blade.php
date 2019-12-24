@@ -11,7 +11,7 @@
                     <div class="search-blood-left">
                         <h1>Search Blood Donors</h1>
                         <div class="search-box"> <span class="errspns"> </span>
-                            <form class="form-horizontal" method="post" action="https://www.bloodbankindia.net/donors/search_result" id="search">
+                            <form class="form-horizontal" method="post" action="{{URL::to('Donor/search_blood')}}" id="search">
                                 <ul class="nav nav-pills">
                                     <li class="search-bloodgroup">
                                         <label>Blood Group *</label>
@@ -312,87 +312,36 @@
                         <div class="widget-content widget-bloodrequest">
                             <h2>Blood Requests</h2>
                             <div class="widget-bloodrequest-content scrollpar" id="style-2">
+                                 @foreach($request as $r)
                                 <div class='blood-req-widget'>
+
+                                 
                                     <div class='b-group2'>
-                                        <div class='sub-b-group-1'> <i class='fa fa-user'></i>&nbsp<b>Sananda Chakraborty </b>&nbsp <i class='fa fa-map-marker'></i>&nbspDurgapur </div>
-                                        <div class='sub-b-group-2'> <i class='fa fa-question-circle'></i>&nbsp27-11-2019&nbsp&nbsp&nbsp<i class='fa fa-clock-o'></i>&nbsp3 days ago </div>
+                                        <div class='sub-b-group-1'> <i class='fa fa-user'></i>&nbsp<b>{{$r->patientname}}</b>&nbsp <i class='fa fa-map-marker'></i>&nbsp{{$r->city}}</div>
+                                        <div class='sub-b-group-2'> <i class='fa fa-question-circle'></i>&nbsp{{$r->required}}&nbsp&nbsp&nbsp<i class='fa fa-clock-o'></i>&nbsp{{$r->required}}</div>
                                         <div class='sub-b-group-3'> </div>
                                     </div>
                                     <div class='b-group3'>
-                                        <div class='b-group'>A- </div>
+                                        <div class='b-group'>{{$r->blood}} </div>
                                         <br>
                                         <div class='sub-b-group-4'>
                                             <a data-toggle='tooltip' data-placement='top' title='View Details' href=tools/req/2059.html> <i class='fa fa-search' aria-hidden='true'></i> </a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class='blood-req-widget'>
-                                    <div class='b-group2'>
-                                        <div class='sub-b-group-1'> <i class='fa fa-user'></i>&nbsp<b>Sananda Chakraborty </b>&nbsp <i class='fa fa-map-marker'></i>&nbspDurgapur </div>
-                                        <div class='sub-b-group-2'> <i class='fa fa-question-circle'></i>&nbsp27-11-2019&nbsp&nbsp&nbsp<i class='fa fa-clock-o'></i>&nbsp3 days ago </div>
-                                        <div class='sub-b-group-3'> </div>
-                                    </div>
-                                    <div class='b-group3'>
-                                        <div class='b-group'>A- </div>
-                                        <br>
-                                        <div class='sub-b-group-4'>
-                                            <a data-toggle='tooltip' data-placement='top' title='View Details' href=tools/req/2058.html> <i class='fa fa-search' aria-hidden='true'></i> </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class='blood-req-widget'>
-                                    <div class='b-group2'>
-                                        <div class='sub-b-group-1'> <i class='fa fa-user'></i>&nbsp<b>PG Rajendran </b>&nbsp <i class='fa fa-map-marker'></i>&nbspHyderabad, Andhra Pradesh </div>
-                                        <div class='sub-b-group-2'> <i class='fa fa-question-circle'></i>&nbsp01-11-2019&nbsp&nbsp&nbsp<i class='fa fa-clock-o'></i>&nbsp8 days ago </div>
-                                        <div class='sub-b-group-3'> </div>
-                                    </div>
-                                    <div class='b-group3'>
-                                        <div class='b-group'>AB+ </div>
-                                        <br>
-                                        <div class='sub-b-group-4'>
-                                            <a data-toggle='tooltip' data-placement='top' title='View Details' href=tools/req/2057.html> <i class='fa fa-search' aria-hidden='true'></i> </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class='blood-req-widget'>
-                                    <div class='b-group2'>
-                                        <div class='sub-b-group-1'> <i class='fa fa-user'></i>&nbsp<b>Bipin Bhai Joshi </b>&nbsp <i class='fa fa-map-marker'></i>&nbspAhmedabad </div>
-                                        <div class='sub-b-group-2'> <i class='fa fa-question-circle'></i>&nbsp30-10-2019&nbsp&nbsp&nbsp<i class='fa fa-clock-o'></i>&nbsp9 days ago </div>
-                                        <div class='sub-b-group-3'> </div>
-                                    </div>
-                                    <div class='b-group3'>
-                                        <div class='b-group'>A+ </div>
-                                        <br>
-                                        <div class='sub-b-group-4'>
-                                            <a data-toggle='tooltip' data-placement='top' title='View Details' href=tools/req/2056.html> <i class='fa fa-search' aria-hidden='true'></i> </a>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                         <div class="widget-content widget-recentdonors">
                             <h2>Recent Donors</h2>
                             <div class="widget-recentdonors-content">
+                                 @foreach($donor as $d)
                                 <div class='blood-req-widget'>
-                                    <div class='rec-b-group'>B+ </div>
-                                    <div class='rec-b-name'><b style='font-family:HelveticaNeue-Bold;'>Shubham Tyagi </b> (Ghaziabad)
-                                        <br/> 3 hours ago </div>
+                                    <div class='rec-b-group'>{{$d->blood}} </div>
+                                    <div class='rec-b-name'><b style='font-family:HelveticaNeue-Bold;'>{{$d->fullname}} </b> ({{$d->city}})
+                                        <br/>{{$d->updated_at}}</div>
                                 </div>
-                                <div class='blood-req-widget'>
-                                    <div class='rec-b-group'>B+ </div>
-                                    <div class='rec-b-name'><b style='font-family:HelveticaNeue-Bold;'>Dhruv Ajay Sureka </b> (Mumbai)
-                                        <br/> 5 hours ago </div>
-                                </div>
-                                <div class='blood-req-widget'>
-                                    <div class='rec-b-group'>A+ </div>
-                                    <div class='rec-b-name'><b style='font-family:HelveticaNeue-Bold;'>Shruthi PK </b> (Bangalore)
-                                        <br/> 12 hours ago </div>
-                                </div>
-                                <div class='blood-req-widget'>
-                                    <div class='rec-b-group'>O- </div>
-                                    <div class='rec-b-name'><b style='font-family:HelveticaNeue-Bold;'>Anand Yadav </b> (Mumbai)
-                                        <br/> 1 day ago </div>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
@@ -463,9 +412,9 @@
         $(".control-group .input-group select").addClass("form-control");
     </script>
     <script>
-        var donor = "7400";
-        var request = "2000";
-        var active = "3500";
+        var donor = "{{$count}}";
+        var request = "{{$count1}}";
+        var active = "{{$count2}}";
         console.log(donor);
         setTimeout(function() {
             $('.meter1').html(donor);

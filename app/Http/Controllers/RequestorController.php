@@ -20,7 +20,9 @@ class RequestorController extends Controller
                      ->get();
                      $count = Registration::count();
                       $count1 = RequestBlood::count();
-                       $count2 = Registration::where('active','=',$active)->count(); 
+                       $count2 = Registration::where('active','=',$active)
+                                         ->where('role','=','Donor')
+                                           ->count(); 
 
                      
        return view('Requestor.pages.index',[
@@ -128,14 +130,19 @@ class RequestorController extends Controller
     public function update($id)
     {
         $employee=RequestBlood::find($id);
-        //dd($employee);
-       return view('Requestor.pages.editrequest',['editrequest'=>$employee]);
+        $active=1;
+          $request=RequestBlood::all();
+          $donor=Registration::where('role','=','Donor')
+                       ->where('active','=',$active)
+                     ->get();
+      // return view('Requestor.pages.request',['request'=>$request],['donor'=>$donor]);
+       return view('Requestor.pages.editrequest',['editrequest'=>$employee,'request'=>$request,'donor'=>$donor]);
     }
 
     public function update_data(Request $request,$id)
     {
         $obj=RequestBlood::find($id);
-       $user_id=Session::get('userid');
+      // $user_id=Session::get('userid');
         
         $obj->patientname=$request->patient_name;
         $obj->hospitaladdress=$request->hospital_detail;
@@ -148,11 +155,11 @@ class RequestorController extends Controller
 
           $obj->message=$request->other_mess;
           $obj->required=$request->date;
-           $obj->user_id=$user_id;
+           
            if($obj->save())
         {
            
-            return view('Requestor.pages.yourrequest',['requests'=>$data]);
+            return redirect()->to('Requestor/yourrequest');
         }
     }
 

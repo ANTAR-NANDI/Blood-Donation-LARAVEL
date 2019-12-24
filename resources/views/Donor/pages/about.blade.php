@@ -1,4 +1,4 @@
-@extends('User.layouts.defaults')
+@extends('Donor.layouts.defaults')
 @section('abc')
 <div class="widget-item-about">
         <div class="container about">

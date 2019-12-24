@@ -17,9 +17,11 @@ class UserController extends Controller
           $donor=Registration::where('role','=','Donor')
                        ->where('active','=',$active)
                      ->get();
-                     $count = Registration::count();
+                     $count = Registration::where('role','=','Donor')->count();
                       $count1 = RequestBlood::count();
-                       $count2 = Registration::where('active','=',$active)->count(); 
+                       $count2 = Registration::where('active','=',$active)
+                                        -> where('role','=','Donor')
+                       ->count(); 
 
                      
        return view('User.pages.index',[
@@ -44,7 +46,13 @@ class UserController extends Controller
     }
     public function tips()
     {
-    	return view('User.pages.tips');
+       $active=1;
+          $request=RequestBlood::all();
+          $donor=Registration::where('role','=','Donor')
+                       ->where('active','=',$active)
+                     ->get();
+       return view('User.pages.tips',['request'=>$request],['donor'=>$donor]);
+    	//return view('User.pages.tips');
     }
      public function contact()
     {

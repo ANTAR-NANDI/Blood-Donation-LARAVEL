@@ -1,141 +1,124 @@
-<span class="errspns"></span>
-    <header class="site-header">
-        <div class="container">
-            <div class="row">
-                <div class="mobilemenu">
-                    <a href="#" class="menu-toggle-btn">
-                        <span id="toggle" class="">
-                             </span>
-                    </a>
-                </div>
-                <div class="header-left">
-                    <div class="logo">
-                        <a href="{{ URL::to('/') }}"><img src="{{ asset('website/bbi_theme/images/bbi-logo.png') }}" alt="Universe" /></a>
-                    </div>
-                </div>
-               <!--  <div class="header-right">
-
-                    <div class="header-login-left">
-                        <form class="form-horizontal" method="post" action="{{ URL::to('login') }}" id="login_user">
-                            @csrf                            <ul class="nav nav-pills">
-                                <li>
-                                    <label>Email/Mobile Number</label>
-                                    <input type="text" id="emailid" name="emailid" rel="tooltip" value="" title="Email can contain only letters, numbers, periods (.), @, hyphens (-) and underscores (_)."> </li>
-                                <li>
-                                    <label>Password</label>
-                                    <input type="password" id="password" name="password" rel="tooltip" value="" title=" Please enter your password. Minimum 8 characters,case sensitive."> </li>
-                                <li>
-                                    <button type="submit" class="btn btn-danger login-form-head">Login</button>
-                                </li>
-                                <a href="donors/forgotpassword.html" class="forgot">Forgot password?</a>
-                                <!-- @if(Session::has('msg'))
-                                <div class="alert alert-danger">
-                                    <strong>{{ Session::get('msg') }}</strong>
-                                </div>
-                                @endif -->
-                            </ul>
-                        </form>
-                    </div>
-                    <!-- header-login-left -->
-                    <div class="header-login-right-desk">
-                        <ul>
-                            <li><a href="donors/register.html" class="reg-btn hvr-bounce-to-bottom m1">Register</a></li>
-
-                    </div>
-                </div> -->
-                <!-- /.header-right -->
+ <div class="left-sidebar-pro">
+        <nav id="sidebar" class="">
+            <div class="sidebar-header">
+                <h3>Blood Donation</h3>
+                <strong><img src="img/logo/logosn.png" alt="" style="height: 20px" /></strong>
             </div>
-            <!-- row -->
-        </div>
-        <!-- container -->
-        <div class="nav-bar-main" role="navigation">
-            <div class="container">
-                <div class="row">
-                    <nav class="main-navigation clearfix visible-md visible-lg" id="bs-example-navbar-collapse-1" role="navigation">
-                        <ul class="main-menu sf-menu">
-                            <li class=""><a href="{{ URL::to('/') }}" class="hvr-bounce-to-bottom-2 m1-2">Search Donor</a></li>
-                            <li class=""><a href="{{ URL::to('User/about') }}" class="hvr-bounce-to-bottom-2 m1-2">About Us</a> </li>
+            <div class="nalika-profile">
+                <div class="profile-dtl">
+                    <a href="#"><img src="img/notification/4.jpg" alt="" /></a>
+                    <h2>ANTAR <span class="min-dtn">NANDI</span></h2>
+                </div>
+                <div class="profile-social-dtl">
+                    <ul class="dtl-social">
+                        <li><a href="https://www.facebook.com/antar.nandy"><i class="icon nalika-facebook"></i></a></li>
+                        <li><a href="https://twitter.com/ANTAR_NANDI"><i class="icon nalika-twitter"></i></a></li>
+                        <li><a href="#"><i class="icon nalika-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="left-custom-menu-adp-wrap comment-scrollbar">
+                <nav class="sidebar-nav left-sidebar-menu-pro">
+                    <ul class="metismenu" id="menu1">
+                        <li class="active">
+                            <a href="{{URL::to('Admin/home')}}">
+                                   <i class="icon nalika-home icon-wrap"></i>
+                                   <span >Home</span>
+                                </a>
+                           
+                        </li>
+                        <li>
+                            <a href="{{URL::to('Admin/message')}}" aria-expanded="false"><i class="icon nalika-mail icon-wrap"></i> <span>Inbox</span></a>
                             
-                            <li class=""><a href="{{ URL::to('logout') }}" class="hvr-bounce-to-bottom-2 m1-2">Logout</a> </li>
-                            <li class=""><a href="{{ URL::to('User/request') }}" class="hvr-bounce-to-bottom-2 m1-2">Request Blood</a> </li>
-                            <li class=""><a href="{{ URL::to('User/tips') }}" class="hvr-bounce-to-bottom-2 m1-2">Blood Tips</a></li>
-                            <li class=""><a href="{{ URL::to('User/contact') }}" class="hvr-bounce-to-bottom-2 m1-2">Contact Us</a></li>
-                     
-
-
-
-
-                        </ul>
-                        <!-- /.main-menu -->
-                    </nav>
-                    <!-- /.main-navigation -->
-                </div>
-                <!-- container -->
+                        </li>
+                       
+                        
+                        
+                        <li>
+                            <a  href="{{URL::to('Admin/alldonorlist')}}" aria-expanded="false"><i class="icon nalika-smartphone-call icon-wrap"></i> <span class="mini-click-non">All Donors</span></a>
+                           
+                        </li>
+                       
+                    </ul>
+                </nav>
             </div>
-            <!-- row -->
-        </div>
-        <!-- /.nav-bar-main -->
-    </header>
-    <!-- /.site-header -->
-    <!-- mobile views changing button code -->
-    <div class="mobile-login">
-        <a href="#" data-toggle="modal" data-target="#myModal" class="mob-btn"> <i class="fa fa-user fa-1x" aria-hidden="true"></i> Login</a>
-        <a href="donors/register.html" class="mob-btn-2"> <i class="fa fa-lock fa-1x" aria-hidden="true"></i> REGISTER NOW</a>
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Login</h4> </div>
-                    <div class="modal-body">
-                        <form class="form-horizontal" method="post" action="https://www.bloodbankindia.net/donors/login_action" id="login_user_mobile">
-                            <!-- </ul> -->
-                            <ul class="nav nav-pills">
-                                <li>
-                                    <label>Email </label>
-                                    <input type="text" id="emailid" name="emailid" rel="tooltip" value="" title="Email can contain only letters, numbers, periods (.), @, hyphens (-) and underscores (_)." /> </li>
-                                <li>
-                                    <label>Password</label>
-                                    <input type="password" id="password" name="password" rel="tooltip" value="" title=" Please enter your password. Minimum 8 characters,case sensitive." /> </li>
-                                <li>
-                                    <button type="submit" class="btn btn-danger login-form-head">Login</button> <a href="donors/forgotpassword.html" class="forgot">Forgot password?</a>
-                                    <!-- <div class="mobile-fb-btn"> <a href="#" class="reg-btn-2"><i class="fa fa-facebook" aria-hidden="true"></i>Login using Facebook</a> </div> -->
-                                </li>
-                            </ul>
-                        </form>
+        </nav>
+    </div>
+    <!-- Start Welcome area -->
+    <div class="all-content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="logo-pro">
+                        <a href="index.html"><img class="main-logo" src="img/logo/logo.png" alt="" /></a>
                     </div>
-                    <!-- <div class="modal-footer"> <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> </div> --></div>
+                </div>
             </div>
         </div>
-        <div class="header-login-right"> <a href="#" class="reg-btn hvr-bounce-to-bottom m1">REGISTER NOW</a>
-            <!-- <p>Facebook Account</p> -->
-        </div>
-        <div class="clearfix"></div>
-    </div>
-    
-    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-        <div class="container">
-            <ul class="mobile-menu">
-                <li class=""><a href="home.html">Search Donors</a></li>
-                <li class=""><a href="aboutus.html">About Us</a> </li>
-                <!-- <li class=""><a href="https://www.bloodbankindia.net/donors/register">Donor Registration</a> </li> -->
-                <!-- <li class=""><a href="https://www.bloodbankindia.net/donors/search">Search Donors</a> </li> -->
-                <li class=""><a href="donors/register.html">Register As Donor</a>
-                    <li class=""><a href="tools/requestblood.html">Request Blood</a> </li>
-                    <li class=""><a href="information/blooddonationtips.html">Blood Tips</a></li>
-                    <li class=""><a href="contactus.html">Contact Us</a></li>
-
-
-
-
-
-            </ul>
-            <!-- /.main-menu -->
-        </div>
-        <!-- /.container -->
-    </div>
-    <!-- /.nav-bar-main -->
-    <script src="../ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/jquery.validate.min.js" type="text/javascript"></script>
-    <!--Optional: include only if you are using the extra rules in additional-methods.js -->
-    <script src="../ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/additional-methods.min.js" type="text/javascript"></script>
-    
+        <div class="header-advance-area">
+            <div class="header-top-area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="header-top-wraper">
+                                <div class="row">
+                                    <div class="col-lg-1 col-md-0 col-sm-1 col-xs-12">
+                                        <div class="menu-switcher-pro">
+                                            <button type="button" id="sidebarCollapse" class="btn bar-button-pro header-drl-controller-btn btn-info navbar-btn">
+                                                    <i class="icon nalika-menu-task"></i>
+                                                </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-7 col-sm-6 col-xs-12">
+                                        <div class="header-top-menu tabl-d-n hd-search-rp">
+                                            <div class="breadcome-heading">
+                                                <form role="search" class="">
+                                                    <input type="text" placeholder="Search..." class="form-control">
+                                                    <a href=""><i class="fa fa-search"></i></a>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                                        <div class="header-right-info">
+                                            <ul class="nav navbar-nav mai-top-nav header-right-menu">
+                                                <li class="nav-item dropdown">
+                                                    <a href="#"  class="nav-link dropdown-toggle"><i class="icon nalika-mail" aria-hidden="true"></i><span class="indicator-ms"></span></a>
+                                                    <div role="menu" class="author-message-top dropdown-menu animated zoomIn">
+                                                        <div class="message-single-top">
+                                                            <h1>Message</h1>
+                                                        </div>
+                                                        
+                                                        
+                                                    </div>
+                                                </li>
+                                             
+                                                <li class="nav-item">
+                                                    <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
+                                                            <i class="icon nalika-user"></i>
+                                                            
+                                                            <i class="icon nalika-down-arrow nalika-angle-dw"></i>
+                                                        </a>
+                                                    <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn" style="margin-right: 100px">
+                                                        
+                                                        <li><a href="#"><span class="icon nalika-user author-log-ic"></span> My Profile</a>
+                                                        </li>
+                                                        <li><a href="lock.html"><span class="icon nalika-diamond author-log-ic"></span> Lock</a>
+                                                        </li>
+                                                        <li><a href="#"><span class="icon nalika-settings author-log-ic"></span> Settings</a>
+                                                        </li>
+                                                        <li><a href="{{URL::to('logout')}}"><span class="icon nalika-unlocked author-log-ic"></span> Log Out</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile Menu start -->

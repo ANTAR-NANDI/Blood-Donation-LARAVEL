@@ -11,7 +11,7 @@
                     <div class="search-blood-left">
                         <h1>Search Blood Donors</h1>
                         <div class="search-box"> <span class="errspns"> </span>
-                             <form class="form-horizontal" method="post" action="{{URL::to('Requestor/search_blood')}}" id="search">
+                             <form class="form-horizontal" method="post" action="{{URL::to('User/search_blood')}}" id="search">
                                  {{csrf_field()}}
                                 <ul class="nav nav-pills">
                                     <li class="search-bloodgroup">

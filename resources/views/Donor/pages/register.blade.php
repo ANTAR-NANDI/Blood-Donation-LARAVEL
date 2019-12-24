@@ -1,4 +1,4 @@
-@extends('User.layouts.defaults')
+@extends('Donor.layouts.defaults')
 @section('abc')
 
     <script src="../../ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/jquery.validate.min.js" type="text/javascript"></script>

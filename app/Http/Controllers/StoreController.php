@@ -66,7 +66,7 @@ class StoreController extends Controller
     {
     	//dd($request);
     	$email = $request->emailid;
-    	$password = md5($request->password);
+    	$password = $request->password;
         
     	$obj = Registration::where('email','=',$email)
 		    		   ->where('password','=', $password)

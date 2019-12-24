@@ -108,62 +108,25 @@
                             <div id="BLOOD-REQUESTS" class="tab-pane fade in active">
                                 <div class="widget-main">
                                     <div class="widget-inner">
-                                        <div class='blood-req-widget'>
-                                            <div class='b-group2'>
-                                                <div class='sub-b-group-1'> <i class='fa fa-user'></i>&nbsp<b>Sananda Chakraborty </b>&nbsp <i class='fa fa-map-marker'></i>&nbspDurgapur </div>
-                                                <div class='sub-b-group-2'> <i class='fa fa-question-circle'></i>&nbsp27-11-2019&nbsp&nbsp&nbsp<i class='fa fa-clock-o'></i>&nbsp3 days ago </div>
-                                                <div class='sub-b-group-3'> </div>
-                                            </div>
-                                            <div class='b-group3'>
-                                                <div class='b-group'>A- </div>
-                                                <br>
-                                                <div class='sub-b-group-4'>
-                                                    <a data-toggle='tooltip' data-placement='top' title='View Details' href=req/2059.html> <i class='fa fa-search' aria-hidden='true'></i> </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class='blood-req-widget'>
-                                            <div class='b-group2'>
-                                                <div class='sub-b-group-1'> <i class='fa fa-user'></i>&nbsp<b>Sananda Chakraborty </b>&nbsp <i class='fa fa-map-marker'></i>&nbspDurgapur </div>
-                                                <div class='sub-b-group-2'> <i class='fa fa-question-circle'></i>&nbsp27-11-2019&nbsp&nbsp&nbsp<i class='fa fa-clock-o'></i>&nbsp3 days ago </div>
-                                                <div class='sub-b-group-3'> </div>
-                                            </div>
-                                            <div class='b-group3'>
-                                                <div class='b-group'>A- </div>
-                                                <br>
-                                                <div class='sub-b-group-4'>
-                                                    <a data-toggle='tooltip' data-placement='top' title='View Details' href=req/2058.html> <i class='fa fa-search' aria-hidden='true'></i> </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class='blood-req-widget'>
-                                            <div class='b-group2'>
-                                                <div class='sub-b-group-1'> <i class='fa fa-user'></i>&nbsp<b>PG Rajendran </b>&nbsp <i class='fa fa-map-marker'></i>&nbspHyderabad, Andhra Pradesh </div>
-                                                <div class='sub-b-group-2'> <i class='fa fa-question-circle'></i>&nbsp01-11-2019&nbsp&nbsp&nbsp<i class='fa fa-clock-o'></i>&nbsp8 days ago </div>
-                                                <div class='sub-b-group-3'> </div>
-                                            </div>
-                                            <div class='b-group3'>
-                                                <div class='b-group'>AB+ </div>
-                                                <br>
-                                                <div class='sub-b-group-4'>
-                                                    <a data-toggle='tooltip' data-placement='top' title='View Details' href=req/2057.html> <i class='fa fa-search' aria-hidden='true'></i> </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class='blood-req-widget'>
-                                            <div class='b-group2'>
-                                                <div class='sub-b-group-1'> <i class='fa fa-user'></i>&nbsp<b>Bipin Bhai Joshi </b>&nbsp <i class='fa fa-map-marker'></i>&nbspAhmedabad </div>
-                                                <div class='sub-b-group-2'> <i class='fa fa-question-circle'></i>&nbsp30-10-2019&nbsp&nbsp&nbsp<i class='fa fa-clock-o'></i>&nbsp9 days ago </div>
-                                                <div class='sub-b-group-3'> </div>
-                                            </div>
-                                            <div class='b-group3'>
-                                                <div class='b-group'>A+ </div>
-                                                <br>
-                                                <div class='sub-b-group-4'>
-                                                    <a data-toggle='tooltip' data-placement='top' title='View Details' href=req/2056.html> <i class='fa fa-search' aria-hidden='true'></i> </a>
-                                                </div>
-                                            </div>
-                                        </div>
+                                         <div class="widget-inner">
+      @foreach($request as $r)
+                <div class='blood-req-widget scrollpar'>
+                    <div class='b-group2'>
+                        <div class='sub-b-group-1'> <i class='fa fa-user'></i>&nbsp<b>{{$r->patientname}}</b>&nbsp <i class='fa fa-map-marker'></i>&nbsp{{$r->city}}</div>
+                        <div class='sub-b-group-2'> <i class='fa fa-question-circle'></i>&nbsp{{$r->required}}&nbsp&nbsp&nbsp<i class='fa fa-clock-o'></i>&nbsp{{$r->required}}</div>
+                        <div class='sub-b-group-3'> </div>
+                    </div>
+                    <div class='b-group3'>
+                        <div class='b-group'>{{$r->blood}} </div>
+                        <br>
+                        <div class='sub-b-group-4'>
+                            <a data-toggle='tooltip' data-placement='top' title='View Details' href=tools/req/2059.html> <i class='fa fa-search' aria-hidden='true'></i> </a>
+                        </div>
+                 </div>
+                </div>
+    
+     @endforeach
+                    </div>
                                     </div>
                                     <!-- /.widget-inner -->
                                 </div>
@@ -172,26 +135,15 @@
                             <div id="RECENT-DONORS" class="tab-pane fade">
                                 <div class="widget-main" >
                                     <div class="widget-inner">
-                                        <div class='blood-req-widget'>
-                                            <div class='rec-b-group'>B+ </div>
-                                            <div class='rec-b-name'><b style='font-family:HelveticaNeue-Bold;'>Shubham Tyagi </b> (Ghaziabad)
-                                                <br/> 3 hours ago </div>
+                                        
+                                       @foreach($donor as $d)
+                                         <div class='blood-req-widget'>
+                                            <div class='rec-b-group'>{{$d->blood}} </div>
+                                            <div class='rec-b-name'><b style='font-family:HelveticaNeue-Bold;'>{{$d->fullname}} </b> ({{$d->city}})
+                                                <br/>{{$d->updated_at}}</div>
                                         </div>
-                                        <div class='blood-req-widget'>
-                                            <div class='rec-b-group'>B+ </div>
-                                            <div class='rec-b-name'><b style='font-family:HelveticaNeue-Bold;'>Dhruv Ajay Sureka </b> (Mumbai)
-                                                <br/> 5 hours ago </div>
-                                        </div>
-                                        <div class='blood-req-widget'>
-                                            <div class='rec-b-group'>A+ </div>
-                                            <div class='rec-b-name'><b style='font-family:HelveticaNeue-Bold;'>Shruthi PK </b> (Bangalore)
-                                                <br/> 12 hours ago </div>
-                                        </div>
-                                        <div class='blood-req-widget'>
-                                            <div class='rec-b-group'>O- </div>
-                                            <div class='rec-b-name'><b style='font-family:HelveticaNeue-Bold;'>Anand Yadav </b> (Mumbai)
-                                                <br/> 1 day ago </div>
-                                        </div>
+                                         @endforeach
+                                       
                                     </div>
                                     <!-- /.widget-inner -->
                                 </div>
@@ -245,7 +197,7 @@
                                                         <label>Blood Group *</label>
                                                         <div class="input-group">
                                                             <select name="blood" id="blood">
-                                                                <option value="0">{{ $editrequest->blood }}</option>
+                                                                <option value="{{ $editrequest->blood }}">{{ $editrequest->blood }}</option>
                                                                 <option value="A+">A+</option>
                                                                 <option value="B+">B+</option>
                                                                 <option value="O+">O+</option>
@@ -336,7 +288,7 @@
                                                     <div class="control-group">
                                                         <label>Hospital Name & Address *</label>
                                                         <div class="input-group">
-                                                            <textarea type="textarea" class="form-control" rel="tooltip" name="hospital_detail" id="hospital_detail" placeholder="aaaa" value="{{ $editrequest->amount}}" title="Type your street address here.	Eg: #23, ABC Street"></textarea>
+                                                           <textarea type="textarea" class="form-control" name="other_mess" id="other_mess"  placeholder="">{{ $editrequest->hospitaladdress}}</textarea>
                                                         </div>
                                                     </div>
                                                    
@@ -376,7 +328,8 @@
                                                     <div class="control-group">
                                                         <label>Other Message</label>
                                                         <div class="input-group">
-                                                            <textarea type="textarea" class="form-control" name="other_mess" id="other_mess"  placeholder=""></textarea>
+                                                            <textarea type="textarea" class="form-control" name="other_mess" id="other_mess"  placeholder="">{{ $editrequest->hospitaladdress}}</textarea>
+                                                           
                                                         </div>
                                                     </div>
                                                     <div class="control-group">
@@ -385,7 +338,7 @@
                                                             <input type="text" class="form-control" rel="tooltip" name="when_require" placeholder="Select" id="when_require" value="" readonly="readonly" title="Select when you need blood"> </div> -->
                                                             <div class="col-md-12">
                                                                 <div class="input-group"> <span class="input-group-addon" id=""><i class="fa fa-calendar"></i></span>
-                                                                <input type="date" class="form-control"  id="when_require" value="required" name="date" title="Select when you need blood">
+                                                                <input type="date" class="form-control"  id="when_require" value="{{ $editrequest->required}}" name="date" title="Select when you need blood">
                                                               </div>
                                                     </div>
                                                 </div>
@@ -403,7 +356,7 @@
                                 <div class="mob-con-border control-group">
                                     <div class="controls">
                                         <label class="checkbox">
-                                            <input type="checkbox" value="accept" name="accept_terms" /> I agree to have my contact details broadcasted to the registered donors of BloodBankIndia.net </label>
+                                            <input type="checkbox" value="accept" name="accept_terms" required /> I agree to have my contact details broadcasted to the registered donors of BloodBankIndia.net </label>
                                     </div>
                                 </div>
 
