@@ -37,72 +37,31 @@
                                                         <div class="input-group">
                                                             <select name="city_name" id="city_name">
                                                                 <option value="0">Select </option>
-                                                                <option value="1">Agartala</option>
-                                                                <option value="2">Agra</option>
-                                                                <option value="3">Ahmedabad</option>
-                                                                <option value="4">Ahmednagar</option>
-                                                                <option value="5">Aizwal</option>
-                                                                <option value="6">Ajmer</option>
-                                                                <option value="7">Akola</option>
-                                                                <option value="8">Aligarh</option>
-                                                                <option value="9">Allahabad</option>
-                                                                <option value="10">Alwar</option>
-                                                                <option value="11">Ambala</option>
-                                                                <option value="12">Amravati</option>
-                                                                <option value="13">Amreli</option>
-                                                                <option value="14">Amritsar</option>
-                                                                <option value="15">Anand</option>
-                                                                <option value="16">Anantapur</option>
-                                                                <option value="17">Anklesvar</option>
-                                                                <option value="18">Anuppur</option>
-                                                                <option value="19">Araria</option>
-                                                                <option value="20">Arcot</option>
-                                                                <option value="21">Arrah</option>
-                                                                <option value="22">Aruppukkottai</option>
-                                                                <option value="23">Asansol</option>
-                                                                <option value="24">Ashok Nagar</option>
-                                                                <option value="25">Aurangabad, Bihar</option>
-                                                                <option value="26">Aurangabad, Maharashtra</option>
-                                                                <option value="27">Azamgarh</option>
-                                                                <option value="28">Bahadurgarh</option>
-                                                                <option value="29">Baharampur</option>
-                                                                <option value="30">Bahraich</option>
-                                                                <option value="31">Balaghat</option>
-                                                                <option value="32">Balangir Orissa</option>
-                                                                <option value="33">Balasore</option>
-                                                                <option value="34">Balia</option>
-                                                                <option value="35">Ballabhgarh</option>
-                                                                <option value="36">Ballarpur</option>
-                                                                <option value="37">Balrampur</option>
-                                                                <option value="38">Balurghat West Bengal</option>
-                                                                <option value="39">Banda</option>
-                                                                <option value="40">Bangalore</option>
-                                                                <option value="41">Banganapalle</option>
-                                                                <option value="42">Banswara</option>
-                                                                <option value="43">Banswara</option>
-                                                                <option value="44">Banur</option>
-                                                                <option value="45">baran</option>
-                                                                <option value="46">Bardhaman</option>
-                                                                <option value="47">Bareilly</option>
-                                                                <option value="48">Barh</option>
-                                                                <option value="49">Baripada</option>
-                                                                <option value="50">Barmer</option>
-                                                                <option value="51">Barrackpur</option>
-                                                                <option value="52">Barwani</option>
-                                                                <option value="53">Beawar</option>
-                                                                <option value="54">Belgaum</option>
-                                                                <option value="55">Bellary</option>
-                                                                <option value="56">Bengaluru</option>
-                                                                <option value="57">Betul</option>
-                                                                <option value="58">Bhagalpur</option>
-                                                                <option value="59">Bhandara</option>
-                                                                <option value="60">Bharatpur</option>
-                                                                <option value="61">Bharuch</option>
-                                                                <option value="62">Bhavani</option>
-                                                                <option value="63">Bhavnagar</option>
-                                                                <option value="64">Bhilai Nagar</option>
-                                                                
-                                                                
+                            <option value="Barguna">Barguna</option>
+                            <option value="Barisal">Barisal</option>
+                            <option value="Bhola">Bhola</option>
+                            <option value="Jhalokati">Jhalokati</option>
+                            <option value="Patuakhali">Patuakhali</option>
+                            <option value="Pirojpur">Pirojpur</option>
+
+
+                            <option value="Brahmanbaria">Brahmanbaria</option>
+                            <option value="Chandpur">Chandpur</option>
+                            <option value="Chittagong">Chittagong</option>
+                            <option value="Cox's-Bazar">Cox's-Bazar</option>
+                            <option value="Feni">Feni</option>
+                                <option value="Bandarban">Bandarban 
+                                    <option value="Amreli">Amreli</option>
+                            <option value="Comilla">Comilla</option>
+                            <option value="Khagrachhari">Khagrachhari</option>
+                            <option value="Lakshmipur">Lakshmipur</option>
+                            <option value="Noakhali">Noakhali</option>
+                            <option value="Rangamati">Rangamati</option>
+                            <option value="Dhaka">Dhaka</option>
+                            <option value="Faridpur">Faridpur</option>
+                            <option value="Gazipur">Gazipur</option>
+                            <option value="Gopalganj">Gopalganj</option>
+                            <option value="Kishoreganj">Kishoreganj</option>
                                                                 
                                                             </select>
                                                             <label for="city_name" class="error"></label>
@@ -140,11 +99,11 @@
                                         <button type="submit" name="submit" class="btn btn-danger btn-bbi">Send</button> <span style="margin-left: 15px;" class="required-span"><sup>*</sup>fields are required</span>
                                         <br/> </div>
 
-                                         @if(session('msg'))
+                                         <!-- @if(session('msg'))
                                         <div class="alert alert-success">
                                             {{ session('msg')}}
                                         </div>
-                                        @endif
+                                        @endif -->
                                         
                                 </div>
                             </form>

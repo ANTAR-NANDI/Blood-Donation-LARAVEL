@@ -86,7 +86,7 @@
                                 <div class="row vertical-center-box vertical-center-box-tablet">
                                     
                                     <div class="col-xs-9 cus-gh-hd-pro">
-                                        <h2 class="text-right no-margin">$100,000</h2>
+                                        <h2 class="text-right no-margin">{{$count3}}</h2>
                                     </div>
                                 </div>
                                 <div class="progress progress-mini">
@@ -111,7 +111,7 @@
           ['Task', 'Hours per Day'],
           ['Total Donor',    {{$count}}],
           ['Requests',      {{$count1}}],
-          ['Active',  {{$count2}}]
+          ['Donation',  {{$count3}}]
           
         ]);
 

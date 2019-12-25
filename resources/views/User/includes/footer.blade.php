@@ -79,6 +79,48 @@
     </script>
     <script src="{{ asset('website/bbi_theme/js/custom.js') }}">
     </script>
+    <script src="{{ asset('website/bbi_theme/toatr.js') }}">
+    </script>
+
+    <script type="text/javascript">
+        toastr.options = {
+  "closeButton": false,
+  "debug": false,
+  "newestOnTop": false,
+  "progressBar": false,
+  "positionClass": "toast-bottom-left",
+  "preventDuplicates": false,
+  "onclick": null,
+  "showDuration": "300",
+  "hideDuration": "1000",
+  "timeOut": "5000",
+  "extendedTimeOut": "1000",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "fadeIn",
+  "hideMethod": "fadeOut"
+}
+         @if(session('signup'))
+        toastr.success('','Successfully Registered!!');
+        @endif
+
+         @if(session('notlogin'))
+        toastr.warning('notlogin','You are not loggedin Yet!!');
+        @endif
+       
+       
+        @if(session('contact'))
+        toastr.info('contact','Thanks for Contacting US!!');
+        @endif
+        @if(session('invalidlogin'))
+        toastr.warning('invalidlogin','Wrong Email or Password!!!');
+        @endif
+
+         @if(session('loggedin'))
+        toastr.success('loggedin','Loggedin Successfully');
+        @endif
+        
+    </script>
     <div id="fb-root">
     </div>
     

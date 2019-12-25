@@ -78,6 +78,9 @@
     </script>
     <script src="{{ asset('website/bbi_theme/js/custom.js') }}">
     </script>
+     <script src="{{ asset('website/bbi_theme/toatr.js') }}">
+    </script>
+
     <div id="fb-root">
     </div>
     <script>

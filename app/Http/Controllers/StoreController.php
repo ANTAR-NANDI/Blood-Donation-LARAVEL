@@ -31,7 +31,7 @@ class StoreController extends Controller
           // 'message'=>'Successfully Inserted',
           // 'alert-type'=>'success'
           //   );
-            return redirect('User/register')->with('msg', 'Thanks for Registration!');
+            return redirect('User/register')->with('signup', 'Thanks for Registration!');
             // return back()->with($notification);
         }
     }
@@ -50,15 +50,8 @@ class StoreController extends Controller
       
         
         if($obj->save())
-        {
-            
-            //dd('Hello');
-          if($request->session()->get('userrole')=='Requestor')
-             return redirect('Requestor/contact')->with('msg', 'Thanks for Contact US!');
-            if($request->session()->get('userrole')=='Donor')
-             return redirect('Donor/contact')->with('msg', 'Thanks for Contact US!');
-           else
-            return redirect('User/contact')->with('msg', 'Thanks for Contact US!');
+        {   
+            return redirect('User/contact')->with('contact', 'Thanks for Contact US!');
             
         }
     }
@@ -71,8 +64,6 @@ class StoreController extends Controller
     	$obj = Registration::where('email','=',$email)
 		    		   ->where('password','=', $password)
 		    		   ->first();
-                      
-
     	if($obj){
     		// dd($obj);
     		$request->session()->put('userid', $obj->id);
@@ -82,22 +73,24 @@ class StoreController extends Controller
             if($request->session()->get('userrole') =='Admin')
             {
              // dd('Admin');
-               return redirect()->to('Admin/home');
+               //return redirect()->to('Admin/home');
+               return redirect('Admin/home')->with('loggedin', 'Successfully Loggedin');
             }
             else if($request->session()->get('userrole') =='Donor')
             {
               //dd('Donor');
-               return redirect()->to('Donor/home');
+               return redirect('Donor/home')->with('loggedin', 'Successfully Loggedin' );
             }
             else if($request->session()->get('userrole') =='Requestor')
             {
              // dd('Requestor');
-               return redirect()->to('Requestor/home');
+              return redirect('Requestor/home')->with('loggedin', 'Successfully Loggedin');
+             //  return redirect()->to('Requestor/home');
             }
     		
     	}
     	else {
-    		return redirect()->back()->with('msg',"Invalid Email or Password");
+    		return redirect()->back()->with('invalidlogin',"Invalid Email or Password");
     	}
     }
 }

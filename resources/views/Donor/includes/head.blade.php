@@ -7,7 +7,7 @@
         <a itemprop="email" href="mailto:dreamgirl9931@gmail.com">bddonor.net</a>
     </div>
    <link href="{{ asset('website/bbi_theme/style.css') }}" rel="stylesheet" media="screen" />
-
+ <link href="{{ asset('website/bbi_theme/toastr.css') }}" rel="stylesheet" media="screen" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ asset('website/bbi_theme/images/ico/apple-touch-icon-114-precomposed.html') }}" />
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ asset('website/bbi_theme/images/ico/apple-touch-icon-72-precomposed.html') }}" />
     <link rel="apple-touch-icon-precomposed" href="{{ asset('website/bbi_theme/images/ico/apple-touch-icon-57-precomposed.html') }}" />

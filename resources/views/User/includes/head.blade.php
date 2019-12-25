@@ -7,6 +7,7 @@
         <a itemprop="email" href="mailto:info@bloodbankindia.net">infodotbloodbankindia.net</a>
     </div>
    <link href="{{ asset('website/bbi_theme/style.css') }}" rel="stylesheet" media="screen" />
+   <link href="{{ asset('website/bbi_theme/toastr.css') }}" rel="stylesheet" media="screen" />
    <!-- <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet"> -->
 
 

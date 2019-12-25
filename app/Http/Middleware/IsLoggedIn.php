@@ -16,7 +16,7 @@ class IsLoggedIn
     public function handle($request, Closure $next)
     {
         if(!$request->session()->has('userid')){ // if userid is not set in session
-            return redirect()->to('/')->with('msg', 'You Have to Login for requesting for blood');
+            return redirect()->to('/')->with('notlogin', 'You Have to Login for requesting for blood');
 
         }
         return $next($request);

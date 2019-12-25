@@ -18,7 +18,7 @@ class RequestorController extends Controller
           $donor=Registration::where('role','=','Donor')
                        ->where('active','=',$active)
                      ->get();
-                     $count = Registration::count();
+                     $count = Registration::where('role','=','Donor')->count();
                       $count1 = RequestBlood::count();
                        $count2 = Registration::where('active','=',$active)
                                          ->where('role','=','Donor')

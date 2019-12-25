@@ -7,6 +7,7 @@ use App\Registration;
 use Session;
 use App\RequestBlood;
 use App\Contact;
+use App\Donation;
 class AdminController extends Controller
 {
      public function alldonor()
@@ -28,6 +29,7 @@ class AdminController extends Controller
                        $count2 = Registration::where('active','=',$active)
                                          ->where('role','=','Donor')
                                            ->count(); 
+                        $count3 = Donation::count();
 
                      
        return view('Admin.pages.index',[
@@ -35,7 +37,7 @@ class AdminController extends Controller
         'count'=>$count,
         'count1'=>$count1,
         'count2'=>$count2,
-
+          'count3'=>$count3
       ]);
        
     }

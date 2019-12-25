@@ -119,13 +119,13 @@
                 <div class="control-group">
                     <label>Full Name *</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" aria-describedby="basic-addon1" rel="tooltip" name="donor_name" id="donor_name" value="" title="Please fill your Fullname Maximum 20 characters. "> </div>
+                        <input type="text" class="form-control" aria-describedby="basic-addon1" rel="tooltip" name="donor_name" id="donor_name" value="" title="Please fill your Fullname Maximum 20 characters. " required> </div>
                        <span class="error">{{ $errors->first('name') }}</span>
                 </div>
                 <div class="control-group">
                     <label>Email ID *</label>
                     <div class="input-group">
-                        <input type="email" class="form-control" rel="tooltip" name="emailid" id="emailid" value="" title="Email can contain only letters, numbers, periods (.), @, hyphens (-) and underscores (_)."> </div>
+                        <input type="email" class="form-control" rel="tooltip" name="emailid" id="emailid" value="" title="Email can contain only letters, numbers, periods (.), @, hyphens (-) and underscores (_)." required> </div>
                         <span class="error">{{ $errors->first('email') }}</span>
                 </div>
             </div>
@@ -133,7 +133,7 @@
                 <div class="control-group">
                     <label>Password *</label>
                     <div class="input-group">
-                        <input type="password" class="form-control" rel="tooltip" id="password" name="password" value="" title=" Please enter your password. Minimum 8 characters,one uppercase,one lowecase,one symbol,and number.">
+                        <input type="password" class="form-control" rel="tooltip" id="password" name="password" value="" title=" Please enter your password. Minimum 8 characters,one uppercase,one lowecase,one symbol,and number." required>
                          </div>
                          <span class="error">{{ $errors->first('password') }}
                          </span>
@@ -141,7 +141,7 @@
                 <div class="control-group">
                     <label>Confirm Password *</label>
                     <div class="input-group">
-                        <input type="password" class="form-control" rel="tooltip" id="cpassword" name="cpassword" value="" title="Please Re-enter your password exactly as entered in previous field."> </div>
+                        <input type="password" class="form-control" rel="tooltip" id="cpassword" name="cpassword" value="" title="Please Re-enter your password exactly as entered in previous field."required > </div>
                         <span class="error">{{ $errors->first('password') }}</span>
                 </div>
             </div>
@@ -156,12 +156,12 @@
                 <div class="control-group">
                     <label>Date of Birth *</label>
                     <div class="input-group"> <span class="input-group-addon" id=""><i class="fa fa-calendar"></i></span>
-                        <input type="date" class="form-control" placeholder="Select" rel="tooltip" name="dob" id="dob" value="" title="Please select your Date of Birth"> </div>
+                        <input type="date" class="form-control" placeholder="Select" rel="tooltip" name="dob" id="dob" value="" title="Please select your Date of Birth" required> </div>
                 </div>
                 <div class="control-group">
                     <label>Your Blood Group *</label>
                     <div class="input-group">
-                        <select name="blood">
+                        <select name="blood" required>
                             <option value="0">Select </option>
                             <option value="A+">A+</option>
                             <option value="B+">B+</option>
@@ -197,7 +197,7 @@
                 <div class="control-group">
                     <label>Weight (Kg) *</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="" name="weight" id="weight" value="" rel="tooltip" title="Please enter your weight"> </div>
+                        <input type="text" class="form-control" placeholder="" name="weight" id="weight" value="" rel="tooltip" title="Please enter your weight" required> </div>
                 </div>
                 <!-- <div class="control-group blooddonateddate" style="display: none;"> <label>Date of last blood donation</label> <div class="input-group"> <span class="input-group-addon" id=""><i class="fa fa-calendar"></i></span> <input type="text" class="form-control" rel="tooltip" name="blooddonateddate" placeholder="Select" id="blooddonateddate" value="" readonly="readonly" title="Please select Last blood donation Date"> </div> </div> -->
                 <div id="row_dim">
@@ -249,67 +249,19 @@
                             <option value="Chittagong">Chittagong</option>
                             <option value="Cox's-Bazar">Cox's-Bazar</option>
                             <option value="Feni">Feni</option>
-
-
-
-
-
-
-
-
-             <option value="Bandarban">Bandarban                                                            <option value="13">Amreli</option>
+                                <option value="Bandarban">Bandarban 
+                                    <option value="Amreli">Amreli</option>
                             <option value="Comilla">Comilla</option>
                             <option value="Khagrachhari">Khagrachhari</option>
                             <option value="Lakshmipur">Lakshmipur</option>
                             <option value="Noakhali">Noakhali</option>
-                            <option value="Rangamati">Anuppur</option>
+                            <option value="Rangamati">Rangamati</option>
                             <option value="Dhaka">Dhaka</option>
                             <option value="Faridpur">Faridpur</option>
                             <option value="Gazipur">Gazipur</option>
                             <option value="Gopalganj">Gopalganj</option>
                             <option value="Kishoreganj">Kishoreganj</option>
-                            <option value="24">Ashok Nagar</option>
-                            <option value="25">Aurangabad, Bihar</option>
-                            <option value="26">Aurangabad, Maharashtra</option>
-                            <option value="27">Azamgarh</option>
-                            <option value="28">Bahadurgarh</option>
-                            <option value="29">Baharampur</option>
-                            <option value="30">Bahraich</option>
-                            <option value="31">Balaghat</option>
-                            <option value="32">Balangir Orissa</option>
-                            <option value="33">Balasore</option>
-                            <option value="34">Balia</option>
-                            <option value="35">Ballabhgarh</option>
-                            <option value="36">Ballarpur</option>
-                            <option value="37">Balrampur</option>
-                            <option value="38">Balurghat West Bengal</option>
-                            <option value="39">Banda</option>
-                            <option value="40">Bangalore</option>
-                            <option value="41">Banganapalle</option>
-                            <option value="42">Banswara</option>
-                            <option value="43">Banswara</option>
-                            <option value="44">Banur</option>
-                            <option value="45">baran</option>
-                            <option value="46">Bardhaman</option>
-                            <option value="47">Bareilly</option>
-                            <option value="48">Barh</option>
-                            <option value="49">Baripada</option>
-                            <option value="50">Barmer</option>
-                            <option value="51">Barrackpur</option>
-                            <option value="52">Barwani</option>
-                            <option value="53">Beawar</option>
-                            <option value="54">Belgaum</option>
-                            <option value="55">Bellary</option>
-                            <option value="56">Bengaluru</option>
-                            <option value="57">Betul</option>
-                            <option value="58">Bhagalpur</option>
-                            <option value="59">Bhandara</option>
-                            <option value="60">Bharatpur</option>
-                            <option value="61">Bharuch</option>
-                            <option value="62">Bhavani</option>
-                            <option value="63">Bhavnagar</option>
-                            <option value="64">Bhilai Nagar</option>
-                            <option value="65">Bhimavaram</option>
+                            
                            
                         </select>
                         <label for="city_name" class="error"></label>
@@ -543,14 +495,14 @@
 
 
 
-                                        @if(session('msg'))
+                                       <!--  @if(session('msg'))
                                         <div class="alert alert-success">
                                             {{ session('msg')}}
                                         </div>
                                         <script>
                                             alert('Registered Successfully');
                                         </script>
-                                        @endif
+                                        @endif -->
                                 </div>
                             </form>
                         </div>
